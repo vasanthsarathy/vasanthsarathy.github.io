@@ -9,17 +9,20 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Tufts University</p>
+    <p>#475</p>
+    <p>177 College Ave (JCC)</p>
+    <p>Medford, MA 02155</p>
 
-news: true # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
+news: false # includes a list of news items
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am a Research Assistant Professor of Computer Science at [Tufts University](https://engineering.tufts.edu/cs/). My research is in the field of Natural Language Processing. Specifically, I use techniques in neuro-symbolic machine learning, social/cognitive sciences and linguistics to study **social reasoning** and build socially-aware AI.  
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+Previously, I was a Senior Researcher of AI at [Smart Information Flow Technologies (SIFT)](https://www.sift.net/), where I worked closely with the U.S. Department of Defense and the Intelligence Community on several AI-related projects. Prior to that I was a practicing IP lawyer at the law firm of [Ropes and Gray](https://www.ropesgray.com/en) for nearly a decade. I obtained dual-PhD in Computer Science and Cognitive Science from [Tufts University](https://engineering.tufts.edu/cs/), advised by [Matthias Scheutz](https://hrilab.tufts.edu/) and [Dan Dennett](https://en.wikipedia.org/wiki/Daniel_Dennett). I earned an MS in Electrical Engineering and Computer Science from [MIT](https://web.mit.edu/),  BS in Electrical Engineering from the [University of Arkansas](https://www.uark.edu/) and a J.D from [Boston University School of Law](https://www.bu.edu/law/). 
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+A **[recent article](https://www.bu.edu/law/record/articles/2023/drawing-on-law-to-study-ai/)** summarizes my journey.
+
+I spend my non-research time with my wife, three kids, and other family and friends. When I have additional time, I make some art: single-panel cartoons, alcohol inks, and some creative coding. I also play a bit of chess from time to time. 
