@@ -23,6 +23,6 @@ I am a Research Assistant Professor of Computer Science at [Tufts University](ht
 
 Previously, I was a Senior Researcher of AI at [Smart Information Flow Technologies (SIFT)](https://www.sift.net/), where I worked closely with the U.S. Department of Defense and the Intelligence Community on several AI-related projects. Prior to that I was a practicing IP lawyer at the law firm of [Ropes and Gray](https://www.ropesgray.com/en) for nearly a decade. I obtained dual-PhD in Computer Science and Cognitive Science from [Tufts University](https://engineering.tufts.edu/cs/), advised by [Matthias Scheutz](https://hrilab.tufts.edu/) and [Dan Dennett](https://en.wikipedia.org/wiki/Daniel_Dennett). I earned an MS in Electrical Engineering and Computer Science from [MIT](https://web.mit.edu/),  BS in Electrical Engineering from the [University of Arkansas](https://www.uark.edu/) and a J.D from [Boston University School of Law](https://www.bu.edu/law/). 
 
-A **[recent article](https://www.bu.edu/law/record/articles/2023/drawing-on-law-to-study-ai/)** summarizes my journey.
+This **[2023 BU Law article](https://www.bu.edu/law/record/articles/2023/drawing-on-law-to-study-ai/)** summarizes my journey.
 
-I spend my non-research time with my wife, three kids, and other family and friends. When I have additional time, I make some art: single-panel cartoons, alcohol inks, and some creative coding. I also play a bit of chess from time to time. 
+I spend my spare time with my wife, three kids, and other family and friends. When I have some additional time, I make some art: [single-panel cartoons](/legally-drawn), alcohol inks, and some creative coding. I also play a bit of chess from time to time. 
