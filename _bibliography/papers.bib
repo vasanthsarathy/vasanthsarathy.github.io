@@ -5,7 +5,7 @@
 %%-------------------------------
 
 
-% CONFERENCES
+% CONFERENCES and Journals
 
 % 2024
 
@@ -258,6 +258,47 @@ theme={problemsolving},
 
 % 2019
 
+@article{sarathythri2019,
+ author = {Vasanth Sarathy and Thomas Arnold and Matthias Scheutz},
+ title = {When Exceptions Are the Norm: Exploring
+		  the Role of Consent in HRI},
+ journal = {ACM Transactions on Human-Robot Interaction (Formerly, Journal of
+			Human-Robot Interaction)},
+ issue_date = {August 2019},
+ volume = {8},
+ number = {3},
+ month = jul,
+ year = {2019},
+ pages = {14:1--14:21},
+ articleno = {14},
+ numpages = {21},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ abbr={THRI},
+ theme={socialreasoning},
+ pdf={sarathythri2019.pdf},
+ bibtex_show=true,
+ abstract={HRI researchers have made major strides in developing robotic architectures that are capable of reading a limited set of social cues and producing behaviors that enhance their likeability and feeling of comfort amongst humans. However, the cues in these models are fairly direct and the interactions largely dyadic. To capture the normative qualities of interaction more robustly, we propose “consent” as a distinct, critical area for HRI research. Convening important insights in existing HRI work around topics like touch, proxemics, gaze, and moral norms, the notion of consent reveals key expectations that can shape how a robot acts in social spaces. Consent need not be limited to just an explicit permission given in ethically charged or normatively risky scenarios. Instead, it is a richer notion, one that covers even implicit acquiescence in scenarios that otherwise seem normatively neutral. By sorting various kinds of consent through social and legal doctrine, we delineate empirical and technical questions to meet consent challenges faced in major application domains and robotic roles. Attention to consent could show, for example, how extraordinary, norm-violating actions can be justified by agents and accepted by those around them. We argue that operationalizing ideas from legal scholarship can better guide how robotic systems might cultivate and sustain proper forms of consent.},
+ html={https://dl.acm.org/doi/abs/10.1145/3341166}
+} 
+
+@InCollection{scheutzetal2019diarcchapter,
+    author={Matthias Scheutz and Thomas Williams and Evan Krause and Bradley
+			Oosterveld and Vasanth Sarathy and Tyler Frasca},
+    title={An Overview of the Distributed
+		   Integrated Affect and Reflection Cognitive DIARC Architecture},
+    booktitle={Cognitive Architectures},
+  pages={165--193},
+  year={2019},
+  publisher={Springer},
+  theme={socialreasoning},
+  pdf={scheutzetal2019diarcchapter.pdf},
+  abbr={Cog. Arch.},
+  bibtex_show=true,
+  abstract={DIARC has been under development for over 15 years. Different from other cognitive architectures like SOAR or ACT-R, DIARC is an intrinsically component-based distributed architecture scheme that can be instantiated in many different ways. Moreover, DIARC has several distinguishing features, such as affect processing and deep natural language integration, is open-world and multi-agent enabled, and allows for “one-shot instruction-based learning” of new percepts, actions, concepts, rules, and norms. In this chapter, we will present an overview of the DIARC architecture and compare it to classical cognitive architectures. After laying out the theoretical foundations, we specifically focus on the action, vision, and natural language subsystems. We then give two examples of DIARC configurations for “one-shot learning” and “component-sharing”. We also briefly mention different use cases of DIARC, in particular, for autonomous robots in human-robot interaction experiments and for building cognitive models.},
+  html={https://link.springer.com/chapter/10.1007/978-3-319-97550-4_11}
+  }
+
 @InProceedings{sarathyscheutzaai2019,
 author={Vasanth Sarathy and Matthias Scheutz},
 title={On Resolving Ambiguous Anaphoric Expressions
@@ -302,6 +343,57 @@ theme={socialreasoning},
 }
 
 % 2018
+
+@article{sarathy2018MacGyverACS,
+  title={MacGyver Problems: AI Challenges for
+		 Testing Resourcefulness and Creativity},
+  author={Vasanth Sarathy and Matthias Scheutz},
+  journal={Advances in Cognitive Systems},
+  volume={6},
+  year={2018},
+  abbr={ACS},
+  bibtex_show=true,
+  theme={problemsolving},
+  abstract={When faced with real-world problems that seem unsolvable, humans display an exceptional degree
+of flexibility and creativity, improvising solutions with the limited resources available. In this essay,
+we propose a class of domain-independent AI challenge tasks – MacGyver Problems – that target
+these capabilities. We present a formal framework for generating these problems and outline a
+set of independent abilities that will let the research community make progress. We also consider,
+informally, ways in which researchers can measure progress and evaluate agents under the proposed
+framework.},
+  pdf={sarathy2018MacGyverACS.pdf}
+  }
+
+@article{sarathy2018real,
+  title={Real World Problem-Solving},
+  author={Vasanth Sarathy},
+  journal={Frontiers in Human Neuroscience},
+  volume={12},
+  year={2018},
+  publisher={Frontiers Media SA},
+  abbr={Frontiers (Neuro)},
+  theme={problemsolving},
+  bibtex_show=true,
+  abstract={Real world problem-solving (RWPS) is what we do every day. It requires flexibility, resilience, resourcefulness, and a certain degree of creativity. A crucial feature of RWPS is that it involves continuous interaction with the environment during the problem-solving process. In this process, the environment can be seen as not only a source of inspiration for new ideas but also as a tool to facilitate creative thinking. The cognitive neuroscience literature in creativity and problem-solving is extensive, but it has largely focused on neural networks that are active when subjects are not focused on the outside world, i.e., not using their environment. In this paper, I attempt to combine the relevant literature on creativity and problem-solving with the scattered and nascent work in perceptually-driven learning from the environment. I present my synthesis as a potential new theory for real world problem-solving and map out its hypothesized neural basis. I outline some testable predictions made by the model and provide some considerations and ideas for experimental paradigms that could be used to evaluate the model more thoroughly.},
+  html={https://www.frontiersin.org/articles/10.3389/fnhum.2018.00261/full},
+  pdf={sarathy2018real.pdf}
+}
+
+@Article{ sarathyetal16ieeej,
+	author = {Vasanth Sarathy and Matthias Scheutz},
+	title = {A Logic-based Computational Framework
+		  for Inferring Cognitive Affordances},
+	journal = {IEEE Transactions on Cognitive and Developmental Systems},
+year={2018}, 
+volume={10}, 
+number={1}, 
+pages={26-43}, 
+abbr={IEEE-TCDS},
+bibtex_show=true,
+abstract={The concept of “affordance” refers to the relationship between human perceivers and aspects of their environment. Being able to infer affordances is central to commonsense reasoning, tool use and creative problem solving in artificial agents. Existing approaches to inferring affordances have focused on functional aspects, relying on either static ontologies or statistical formalisms to extract relationships between physical features of objects, actions, and the corresponding effects of their interaction. These approaches do not provide flexibility with which to reason about affordances in the open world, where affordances are influenced by changing context, social norms, historical precedence, and uncertainty. We develop a computational framework comprising a probabilistic rules-based logical representation coupled with a computational architecture (cognitive affordances logically expressed) to reason about affordances in a more general manner than described in the existing literature. Our computational architecture allows robotic agents to make deductive and abductive inferences about functional and social affordances, collectively and dynamically, thereby allowing the agent to adapt to changing conditions. We demonstrate our approach with experiments, and show that an agent can successfully reason through situations that involve a tight interplay between various social and functional norms.},
+html={https://ieeexplore.ieee.org/abstract/document/7583652},
+pdf={sarathyetal16ieeej.pdf}
+}
 
 @InProceedings{kasenbergetal2018icres,
     author={Daniel Kasenberg and Vasanth Sarathy and Thomas Arnold and Matthias Scheutz and Tom Williams},
@@ -356,6 +448,53 @@ providing the theoretical basis for representation and inference, does not descr
 be learned, and integrated and used with a robotic system. In this work, we describe,
 demonstrate and evaluate an integrated cognitive robotic architecture which can learn cognitive
 affordances for objects from natural language and immediately use this knowledge in a dialoguebased learning and instruction task}}
+
+% 2017
+
+@InProceedings{sarathyetal2017coginfocom,
+    author={Vasanth Sarathy and Matthias Scheutz and Bertram Malle},
+    title={Learning Behavioral Norms in Uncertain
+		   and Changing Contexts},
+    booktitle={Proceedings of the 2017 8th IEEE International Conference on Cognitive Infocommunications (CogInfoCom)},
+    abstract={We demonstrate a novel cognitive capability with which an agent can dynamically learn norms while being exposed to distinct contexts, recognizing the unique identity of each context and the norms that apply in it.},
+    year={2017},
+    bibtex_show=true,
+    theme={socialreasoning},
+    abbr={CogInfoCom},
+    pdf={sarathyetal2017coginfocom.pdf},
+    abstract={Human behavior is often guided by social and moral norms. Robots that enter human societies must therefore behave in norm-conforming ways as well to increase coordination, predictability, and safety in human-robot interactions. However, human norms are context-specific and laced with uncertainty, making the representation, learning, and communication of norms challenging. We provide a formal representation of norms using deontic logic, Dempster-Shafer Theory, and a machine learning algorithm that allows an artificial agent to learn norms under uncertainty from human data. We demonstrate a novel cognitive capability with which an agent can dynamically learn norms while being exposed to distinct contexts, recognizing the unique identity of each context and the norms that apply in it.}
+}
+
+@InProceedings{sarathyetal2017cogsci,
+	title={Mental Representations and Computational
+		Modeling of Context-Specific Human Norm Systems},
+	author={Vasanth Sarathy and Matthias Scheutz and Joseph Austerweil and Yoed Kenett and Mowafak Allaham and Bertram Malle},
+	booktitle={Proceedings of the 39th Annual Meeting of the Cognitive Science Society},
+	year={2017},
+  theme={socialreasoning},
+  bibtex_show=true,
+  abbr={CogSci},
+  pdf={sarathyetal2017cogsci.pdf},
+  abstract={Human behavior is frequently guided by social and moral norms; in fact, no societies, no social groups could exist without norms. However, there are few cognitive science approaches to this central phenomenon of norms. While there has been some progress in developing formal representations of norm systems (eg, deontological approaches), we do not yet know basic properties of human norms: how they are represented, activated, and learned. Further, what computational models can capture these properties, and what algorithms could learn them? In this paper we describe initial experiments on human norm representations in which the context specificity of norms features prominently. We then provide a formal representation of norms using Dempster-Shafer Theory that allows a machine learning algorithm to learn norms under uncertainty from these human data, while preserving their context specificity.}
+}
+
+
+% 2016
+
+
+@InProceedings{sarathy2016icdl,
+	author={Vasanth Sarathy and Matthias Scheutz},
+	title={Beyond Grasping - Perceiving Affordances
+		Across Various Stages of Cognitive Development},
+	booktitle={Proceedings of the The Sixth Joint IEEE International Conference Developmental Learning and Epigenetic Robotics (ICDL)},
+	year={2016},
+  bibtex_show=true,
+  abbr={ICDL},
+  html={https://ieeexplore.ieee.org/abstract/document/7846815},
+  abstract={The concept of “affordance” has typically represented the relationship between human perceivers and their environment. Affordance perception, representation, and inference are central to commonsense reasoning, tool-use and creative problem-solving in artificial agents. Existing approaches to representing affordances have focused on its physical aspects, relying on either static ontologies or statistical formalisms to extract relationships between physical features of objects, actions and the corresponding effects of their interaction. These approaches fail to provide flexibility with which to reason about affordances through various developmental stages, where they are more influenced by changing context, social norms, historical precedence, and uncertainty. We develop a formal rules-based logical representational format coupled with an uncertainty-processing framework to reason about cognitive affordances in a more general manner than shown in the existing literature. Our framework, which is retained through cognitive development, allows agents to make deductive and abductive inferences about functional and social affordances. We demonstrate our approach with an example, and show that an agent can successfully reason through situations that involve a tight interplay between various social and functional norms.},
+  theme={socialreasoning},
+  pdf={sarathy2016icdl.pdf}
+}
 
 
 %%%%%%%%%%%%%% OTHER DRAFTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%

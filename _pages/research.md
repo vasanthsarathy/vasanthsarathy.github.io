@@ -35,7 +35,7 @@ In this theme, I develop computational methods and AI/robotic architectures to u
 <!-- now I just need to add a field for topic -->
 
 # Sense-making and Problem-Solving
-In this theme, I explore how we simplify the complexity of physical and social world (use of knowledge, cognitive biaes, etc.) for the purposes of efficient problem-solving. I develop computational methods and architectures for fast human-like learning and problem solving. 
+In this theme, I explore how we simplify the complexity of physical and social world (use of knowledge, cognitive biases, etc.) for the purposes of efficient problem-solving. I develop computational methods and architectures for fast human-like learning and problem solving. 
 
 <div class="publications">
 
