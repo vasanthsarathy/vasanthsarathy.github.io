@@ -2,12 +2,18 @@
 layout: page
 permalink: /research/
 title: research
-description: publications by categories in reversed chronological order. 
+description:  
 nav: true
 nav_order: 2
 ---
 
-My research is in developing and using computational methods involving natural language to enable future AI systems to be more trustworthy, reliable and competent collaborators. I take an interdisciplinary approach by combining social/cognitive science theory, linguistics and AI to develop state-of-the-art neuro-symbolic methods. A full list of my publications can be found [here](publications) and on [Google Scholar](https://scholar.google.com/citations?user=3SeoejIAAAAJ&hl=en)
+My research is in developing computational methods:
+1. to better understand human social cognition, and
+2. to build socially-competent AI systems that are more effective and trustworthy. 
+
+**Applications:** fact-checking and detecting misinformation, AI-based research/writing assistants, argument mining systems, legal document review, etc.    
+
+**My Approach:** I take an interdisciplinary approach by combining social/cognitive science theory, linguistics and AI/ML to develop state-of-the-art neuro-symbolic methods. A full list of my publications can be found [here](publications) and on [Google Scholar](https://scholar.google.com/citations?user=3SeoejIAAAAJ&hl=en)
 
 Broadly, my research falls into three main themes:
 1. [Social NLP](#social-nlp)
