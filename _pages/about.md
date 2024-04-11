@@ -10,7 +10,7 @@ profile:
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Tufts University</p>
-    <p>#475</p>
+    <p>#325</p>
     <p>177 College Ave (JCC)</p>
     <p>Medford, MA 02155</p>
 
