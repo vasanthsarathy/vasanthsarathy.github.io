@@ -25,4 +25,4 @@ Previously, I was a Senior Researcher of AI at [Smart Information Flow Technolog
 
 This **[2023 BU Law article](https://www.bu.edu/law/record/articles/2023/drawing-on-law-to-study-ai/)** summarizes my journey.
 
-Outside of work, I spend time with my wife, three kids, and other family and friends. When I have some spare time, I draw [single-panel cartoons](/legally-drawn), dabble in alcohol inks, and experiment with math art. I also play a bit of chess from time to time. 
+Outside of work, I spend time with my wife, three kids, and other family and friends. When I have some spare time, I draw [single-panel cartoons](/legally-drawn), dabble in alcohol inks, and experiment with math art. I also play a bit of chess from time to time.  
