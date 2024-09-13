@@ -13,4 +13,4 @@ horizontal: false
 
 Cartoons about Law that I drew during a creative period between 2010-2015
 
-{% include gallery.html folder="assets/img/art/legally-drawn/img" %}
+{% include gallery.html folder="/assets/img/art/legally-drawn/img" %}
