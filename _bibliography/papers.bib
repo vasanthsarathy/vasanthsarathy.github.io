@@ -7,545 +7,577 @@
 
 % CONFERENCES and Journals
 
+
+
+
+@inproceedings{lu2024icsr,
+  title        = {Towards Human-Robot Co-Creative Collaboration
+                  Through Interactive Task Dialogue},
+  author       = {Helen Long and Jingwen Fen and Emma Bethel and Vasanth Sarathy and Elaine Short and Matthias Scheutz},
+  booktitle    = {International Conference on Social Robotics},
+  year         = {2024},
+  organization = {Springer},
+  abbr         = {ICSR},
+  theme        = {problemsolving},
+  abstract     = {here is currently relatively little work on architectures and evaluations of robots that support creative designs of human interactants in manipulation tasks through dialogue. We build a dialogue system by integrating a large language model into a robot cognitive architecture and investigate whether engaging in dialogues with the robot collaborator on a creative task has positive effects on task satisfaction and experience of the human, evaluating the effect of dialogue on perceived robot utility, intelligence, and supportiveness as a creative partner. We test our hypotheses with a cake decoration task during which participants collaborate with a robot arm equipped with a mixed-initiative co-creative dialogue system to place decorations on a dummy cake. The results show that the participants prefer robots that make reasonable suggestions compared to random suggestions and that they perceive those robots to provide more creative support}
+}
+
+
+@inproceedings{goldowsky2024ijcai,
+  title       = {Analogical Reasoning Within a Conceptual Hyperspace},
+  author      = {Howard Goldowsky and Vasanth Sarathy},
+  maintitle   = {IJCAI 2024: 33rd International Joint Conference on Artificial Intelligence},
+  booktitle   = {IJCAI Workshop on Analogical Abstraction in Cognition, Perception, and Language},
+  year        = {2024},
+  pdf         = {goldowsky2024ijcai.pdf},
+  abbr        = {IJCAI},
+  theme       = {problemsolving},
+  abstract    = {We propose an approach to analogical inference that marries the neuro-symbolic computational power of complex-sampled hyperdimensional computing (HDC) with Conceptual Spaces Theory (CST), a promising theory of semantic meaning. CST sketches, at an abstract level, approaches to analogical inference that go beyond the standard predicate-based structure mapping theories. But it does not describe how such an approach can be operationalized. We propose a concrete HDC-based architecture that computes several types of analogy classified by CST. We present preliminary proof-of-concept experimental results within a toy domain and describe how it can perform category-based and property-based analogical reasoning.},
+  bibtex_show = true
+}
+
 % 2024
-@InProceedings{sarathy2024cogsci,
-	title={Using Puzzle Video Games to Study Cognitive Processes in Human Insight and Creative Problem-Solving},
-	author={Vasanth Sarathy and Nicholas Rabb and Daniel Kasenberg and Matthias Scheutz},
-	booktitle={Proceedings of the 46th Annual Meeting of the Cognitive Science Society},
-  abbr={CogSci},
-	year={2024},
-	theme={problemsolving},
-  abstract={Classical approaches to studying insight problem-solving typically use
-specialized problems (e.g., nine-dot problem, compound-remote
-associates task) as stimuli together with verbal reports from
-subjects during problem-solving to reveal their thought processes,
-possibly adding other task-related metrics such as completion rate and
-physiological measures like eye fixation and neural activity. This
-approach has led to the claims that insight and creative thought
-require impasse and mental restructuring. What is missing from this
-literature is a cognitive process model of insight, and one
-reason for the lack of such a model is the lack of a unified,
-scalable, and tunable experimental framework with which to study human
-creative problem-solving with higher fidelity. In this paper, we
-introduce ESCAPE, an experimental paradigm using puzzle video games as
-stimuli which allow for the collection of process data that can serve
-as a basis for computational models. We have specifically developed a
-set of puzzle games based on this paradigm and conducted experiments
-that demonstrate the utility of the approach by revealing a set of
-computational principles that need to be accounted for by a theory of
-creative problems and the computational models based on it.},
-  bibtex_show=true,
+@inproceedings{sarathy2024cogsci,
+  title       = {Using Puzzle Video Games to Study Cognitive Processes in Human Insight and Creative Problem-Solving},
+  author      = {Vasanth Sarathy and Nicholas Rabb and Daniel Kasenberg and Matthias Scheutz},
+  booktitle   = {Proceedings of the 46th Annual Meeting of the Cognitive Science Society},
+  abbr        = {CogSci},
+  year        = {2024},
+  theme       = {problemsolving},
+  html        = {https://escholarship.org/uc/item/4bc4q23t},
+  pdf         = {sarathy2024cogsci.pdf},
+  abstract    = {Classical approaches to studying insight problem-solving typically use
+                 specialized problems (e.g., nine-dot problem, compound-remote
+                 associates task) as stimuli together with verbal reports from
+                 subjects during problem-solving to reveal their thought processes,
+                 possibly adding other task-related metrics such as completion rate and
+                 physiological measures like eye fixation and neural activity. This
+                 approach has led to the claims that insight and creative thought
+                 require impasse and mental restructuring. What is missing from this
+                 literature is a cognitive process model of insight, and one
+                 reason for the lack of such a model is the lack of a unified,
+                 scalable, and tunable experimental framework with which to study human
+                 creative problem-solving with higher fidelity. In this paper, we
+                 introduce ESCAPE, an experimental paradigm using puzzle video games as
+                 stimuli which allow for the collection of process data that can serve
+                 as a basis for computational models. We have specifically developed a
+                 set of puzzle games based on this paradigm and conducted experiments
+                 that demonstrate the utility of the approach by revealing a set of
+                 computational principles that need to be accounted for by a theory of
+                 creative problems and the computational models based on it.},
+  bibtex_show = true
 }
 
 
 @inproceedings{shukla2023lgts,
-  title={LgTS: Dynamic Task Sampling using LLM-generated sub-goals for Reinforcement Learning Agents},
-  author={Yash Shukla and Wenchang Gao and Vasanth Sarathy and  Alvaro Velasquez and Robert Wright and Jivko Sinapov},
-  booktitle={Proceedings of the 23rd International Conference on Autonomous Agents and Multiagent Systems (AAMAS)},
-  year={2024},
-  arxiv={2310.09454},
-  abbr={AAMAS},
-  theme={problemsolving},
-  bibtex_show=true,
-  abstract={Recent advancements in reasoning abilities of Large Language Models (LLM) has promoted their usage in problems that require high-level planning for robots and artificial agents. However, current techniques that utilize LLMs for such planning tasks make certain key assumptions such as, access to datasets that permit finetuning, meticulously engineered prompts that only provide relevant and essential information to the LLM, and most importantly, a deterministic approach to allow execution of the LLM responses either in the form of existing policies or plan operators. In this work, we propose LgTS (LLM-guided Teacher-Student learning), a novel approach that explores the planning abilities of LLMs to provide a graphical representation of the sub-goals to a reinforcement learning (RL) agent that does not have access to the transition dynamics of the environment. The RL agent uses Teacher-Student learning algorithm to learn a set of successful policies for reaching the goal state from the start state while simultaneously minimizing the number of environmental interactions. Unlike previous methods that utilize LLMs, our approach does not assume access to a propreitary or a fine-tuned LLM, nor does it require pre-trained policies that achieve the sub-goals proposed by the LLM. Through experiments on a gridworld based DoorKey domain and a search-and-rescue inspired domain, we show that generating a graphical structure of sub-goals helps in learning policies for the LLM proposed sub-goals and the Teacher-Student learning algorithm minimizes the number of environment interactions when the transition dynamics are unknown.}
+  title       = {LgTS: Dynamic Task Sampling using LLM-generated sub-goals for Reinforcement Learning Agents},
+  author      = {Yash Shukla and Wenchang Gao and Vasanth Sarathy and  Alvaro Velasquez and Robert Wright and Jivko Sinapov},
+  booktitle   = {Proceedings of the 23rd International Conference on Autonomous Agents and Multiagent Systems (AAMAS)},
+  year        = {2024},
+  arxiv       = {2310.09454},
+  abbr        = {AAMAS},
+  theme       = {problemsolving},
+  html        = {https://dl.acm.org/doi/10.5555/3635637.3663035},
+  pdf         = {shukla2023lgts.pdf},
+  bibtex_show = true,
+  abstract    = {Recent advancements in reasoning abilities of Large Language Models (LLM) has promoted their usage in problems that require high-level planning for robots and artificial agents. However, current techniques that utilize LLMs for such planning tasks make certain key assumptions such as, access to datasets that permit finetuning, meticulously engineered prompts that only provide relevant and essential information to the LLM, and most importantly, a deterministic approach to allow execution of the LLM responses either in the form of existing policies or plan operators. In this work, we propose LgTS (LLM-guided Teacher-Student learning), a novel approach that explores the planning abilities of LLMs to provide a graphical representation of the sub-goals to a reinforcement learning (RL) agent that does not have access to the transition dynamics of the environment. The RL agent uses Teacher-Student learning algorithm to learn a set of successful policies for reaching the goal state from the start state while simultaneously minimizing the number of environmental interactions. Unlike previous methods that utilize LLMs, our approach does not assume access to a propreitary or a fine-tuned LLM, nor does it require pre-trained policies that achieve the sub-goals proposed by the LLM. Through experiments on a gridworld based DoorKey domain and a search-and-rescue inspired domain, we show that generating a graphical structure of sub-goals helps in learning policies for the LLM proposed sub-goals and the Teacher-Student learning algorithm minimizes the number of environment interactions when the transition dynamics are unknown.}
 }
 
 @inproceedings{benkler_2024_value_resonance,
-    title = {Recognizing Value Resonance with Resonance-Tuned RoBERTa Task Definition, Experimental Validation, and Robust Modeling},
-    author = {Noam Benkler and Scott Friedman and Sonja Schmer-Galunder and Drisana Mosaphir and Robert Goldman and Ruta Wheelock and Vasanth Sarathy and Pavan Kantharaju and Matthew McLure},
-    booktitle = {Proceedings of the the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING)},
-    month = dec,
-    year = "2024",
-    publisher = "International Committee on Computational Linguistics",
-    abbr={LREC-COLING},
-	pdf={benkler_2024_value_resonance.pdf},
-	theme={socialnlp},
-  bibtex_show=true,
-  abstract={Understanding the implicit values and beliefs of diverse groups and cultures using qualitative texts -- such as long-form narratives -- and domain-expert interviews is a fundamental goal of social anthropology. This paper builds upon a 2022 study that introduced the NLP task of Recognizing Value Resonance (RVR) for gauging perspective – positive, negative, or neutral – on implicit values and beliefs in textual pairs. This study included a novel hand-annotated dataset, the World Values Corpus (WVC), designed to simulate the task of RVR, and a transformer-based model, Resonance-Tuned RoBERTa, designed to model the task. We extend existing work by refining the task definition and releasing the World Values Corpus (WVC) dataset. We further conduct several validation experiments designed to robustly evaluate the need for task specific modeling, even in the world of LLMs. Finally, we present two additional Resonance-Tuned models trained over extended RVR datasets, designed to improve RVR model versatility and robustness. Our results demonstrate that the Resonance-Tuned models outperform top-performing Recognizing Textual Entailment (RTE) models in recognizing value resonance as well as zero-shot GPT-3.5 under several different prompt structures, emphasizing its practical applicability. Our findings highlight the potential of RVR in capturing cultural values within texts and the importance of task-specific modeling.}
+  title       = {Recognizing Value Resonance with Resonance-Tuned RoBERTa Task Definition, Experimental Validation, and Robust Modeling},
+  author      = {Noam Benkler and Scott Friedman and Sonja Schmer-Galunder and Drisana Mosaphir and Robert Goldman and Ruta Wheelock and Vasanth Sarathy and Pavan Kantharaju and Matthew McLure},
+  booktitle   = {Proceedings of the the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING)},
+  month       = dec,
+  year        = {2024},
+  publisher   = {International Committee on Computational Linguistics},
+  abbr        = {LREC-COLING},
+  pdf         = {benkler_2024_value_resonance.pdf},
+  theme       = {socialnlp},
+  bibtex_show = true,
+  abstract    = {Understanding the implicit values and beliefs of diverse groups and cultures using qualitative texts -- such as long-form narratives -- and domain-expert interviews is a fundamental goal of social anthropology. This paper builds upon a 2022 study that introduced the NLP task of Recognizing Value Resonance (RVR) for gauging perspective – positive, negative, or neutral – on implicit values and beliefs in textual pairs. This study included a novel hand-annotated dataset, the World Values Corpus (WVC), designed to simulate the task of RVR, and a transformer-based model, Resonance-Tuned RoBERTa, designed to model the task. We extend existing work by refining the task definition and releasing the World Values Corpus (WVC) dataset. We further conduct several validation experiments designed to robustly evaluate the need for task specific modeling, even in the world of LLMs. Finally, we present two additional Resonance-Tuned models trained over extended RVR datasets, designed to improve RVR model versatility and robustness. Our results demonstrate that the Resonance-Tuned models outperform top-performing Recognizing Textual Entailment (RTE) models in recognizing value resonance as well as zero-shot GPT-3.5 under several different prompt structures, emphasizing its practical applicability. Our findings highlight the potential of RVR in capturing cultural values within texts and the importance of task-specific modeling.}
 }
 
 % 2023
 
 @inproceedings{sarathyhugo2023,
-	title={Fostering Online Civil Sanctuaries with Theory-Informed Automated Content Moderation},
-	language = {en},
-	booktitle = {Proceedings Ninth International Conference on Computational Social Science},
-  abbr={IC2S2},
-	author = {Vasanth Sarathy and Sonja Schmer-Galunder and Dan Thomsen and Laurel Bobrow and Richard Freedman},
-	year = {2023},
-	theme={socialreasoning},
-  bibtex_show=true,
-  html={https://openreview.net/forum?id=hTxziG1qDQ},
-  pdf={sarathyhugo2023.pdf},
-  abstract={We describe ongoing work in developing AI tools for moderating online social media forums. Current automated efforts to "filter" online hate speech have been ineffective in mitigating the harmful effects of more subtle forms of toxicity and fail to actively promote prosocial speech. Human moderators do more than just filter toxic content – they can interact with empathy, they can engage with the commenters, and not only mitigate antisocial behavior but also promote prosocial behavior, and they can take into account conversational context when deciding when and how to respond to a comment. In this extended abstract, we describe our ongoing work in building a social science theory-informed AI moderator intended to come closer to this human ideal. We describe the theoretical basis of the approach and provide some preliminary results when compared with human moderation.}
+  title       = {Fostering Online Civil Sanctuaries with Theory-Informed Automated Content Moderation},
+  language    = {en},
+  booktitle   = {Proceedings Ninth International Conference on Computational Social Science},
+  abbr        = {IC2S2},
+  author      = {Vasanth Sarathy and Sonja Schmer-Galunder and Dan Thomsen and Laurel Bobrow and Richard Freedman},
+  year        = {2023},
+  theme       = {socialreasoning},
+  bibtex_show = true,
+  html        = {https://openreview.net/forum?id=hTxziG1qDQ},
+  pdf         = {sarathyhugo2023.pdf},
+  abstract    = {We describe ongoing work in developing AI tools for moderating online social media forums. Current automated efforts to "filter" online hate speech have been ineffective in mitigating the harmful effects of more subtle forms of toxicity and fail to actively promote prosocial speech. Human moderators do more than just filter toxic content – they can interact with empathy, they can engage with the commenters, and not only mitigate antisocial behavior but also promote prosocial behavior, and they can take into account conversational context when deciding when and how to respond to a comment. In this extended abstract, we describe our ongoing work in building a social science theory-informed AI moderator intended to come closer to this human ideal. We describe the theoretical basis of the approach and provide some preliminary results when compared with human moderation.}
 }
 
-@InProceedings{friedman2023cogsci,
-	title={Mapping a Plurality of Explanations with NLP: A Case Study of Mothers and Health Workers in India},
-	author={Scott Friedman and Sonja Schmer-Galunder and Vasanth Sarathy and Ruta Wheelock and Matthew McLure and Drisana Mosaphir and Robert P Goldman and Noam Benkler and Pavan Kantharaju and Micah Goldwater and Cristine Legare},
-	booktitle={Proceedings of the 45th Annual Meeting of the Cognitive Science Society},
-  abbr={CogSci},
-	year={2023},
-	theme={socialnlp},
-	html={https://escholarship.org/uc/item/6727h95d},
-	pdf={friedman2023cogsci.pdf},
-	abstract={Understanding the values, norms, behaviors, and causal beliefs of communities is a central goal of cognitive science, with practical benefits of grasping and improving community factors such as healthcare delivery. These cultural causal beliefs are evident, in part, within narratives, interview transcripts, ethnography, and other textual sources, but analyzing these texts presently involves tedious expert hand-coding or relatively shallow qualitative text analysis or classification. We present a novel approach for extracting graphical causal models from text via NLP, including qualitative causality, intentions, teleology, sentiment, welfare, social influence, and other rationale. The factors (i.e., nodes) of these causal models are tagged with ethnographic attributes and word-senses, allowing aggregation of causal models over thousands of passages to identify correlations and recurring themes. We apply this approach to a corpus of narrative interviews about maternal and child health and healthcare delivery in Bihar, India, corroborating the hand-coded results of human experts and also identifying novel insights about explanatory structure.},
-	pdf={friedman2023cogsci.pdf},
-  bibtex_show=true,
+@inproceedings{friedman2023cogsci,
+  title       = {Mapping a Plurality of Explanations with NLP: A Case Study of Mothers and Health Workers in India},
+  author      = {Scott Friedman and Sonja Schmer-Galunder and Vasanth Sarathy and Ruta Wheelock and Matthew McLure and Drisana Mosaphir and Robert P Goldman and Noam Benkler and Pavan Kantharaju and Micah Goldwater and Cristine Legare},
+  booktitle   = {Proceedings of the 45th Annual Meeting of the Cognitive Science Society},
+  abbr        = {CogSci},
+  year        = {2023},
+  theme       = {socialnlp},
+  html        = {https://escholarship.org/uc/item/6727h95d},
+  pdf         = {friedman2023cogsci.pdf},
+  abstract    = {Understanding the values, norms, behaviors, and causal beliefs of communities is a central goal of cognitive science, with practical benefits of grasping and improving community factors such as healthcare delivery. These cultural causal beliefs are evident, in part, within narratives, interview transcripts, ethnography, and other textual sources, but analyzing these texts presently involves tedious expert hand-coding or relatively shallow qualitative text analysis or classification. We present a novel approach for extracting graphical causal models from text via NLP, including qualitative causality, intentions, teleology, sentiment, welfare, social influence, and other rationale. The factors (i.e., nodes) of these causal models are tagged with ethnographic attributes and word-senses, allowing aggregation of causal models over thousands of passages to identify correlations and recurring themes. We apply this approach to a corpus of narrative interviews about maternal and child health and healthcare delivery in Bihar, India, corroborating the hand-coded results of human experts and also identifying novel insights about explanatory structure.},
+  pdf         = {friedman2023cogsci.pdf},
+  bibtex_show = true
 }
 
 % 2022
 
 @inproceedings{sarathyargumentation2022,
-	title={A Neuro-Symbolic Cognitive System for
-		Intuitive Argumentation},
-	language = {en},
-	booktitle = {Proceedings of the {Tenth} {Annual} {Conference} on {Advances} in {Cognitive} {Systems}},
-	author = {Vasanth Sarathy and Mark Burstein and Scott Friedman and Robert Bobrow and Ugur Kuter},
-  abbr={ACS},
-	year = {2022},
-	theme={socialreasoning},
-	pdf={sarathyargumentation2022},
-	abstract={Making and evaluating arguments is an important cognitive capability that plays a vital role in human cooperation by allowing us to communicate beliefs and persuade others. In this paper, we ask
-how can machines comprehend arguments. Research in computational argumentation has a rich
-history of addressing questions about the abstract dynamics of argumentation and how argument
-structures can be mined from text. However, what is missing is an integrated cognitive system that
-provides a computational account for how we might intuitively make sense of arguments. Work in
-cognitive psychology has suggested that when presented with a novel argument, humans interpret
-the language and produce acceptability/coherence judgments intuitively. In this paper, we introduce SKEPTIC, a computational implementation of the process of intuitive argumentation, combining modern deep neural networks and natural language processing techniques with established
-cognitive systems principles. We describe an architecture and an algorithm for extracting graphlike argument structures from raw unstructured text as well as retrieving implicit assumptions that
-support the argument. Being able to extract arguments and their implicit assumptions will be able
-to help us detect misinformation, reduce polarization, understand social and cultural rationales, and
-assist with critical thinking and persuasive writing.},
-  bibtex_show=true,
+  title       = {A Neuro-Symbolic Cognitive System for
+                 Intuitive Argumentation},
+  language    = {en},
+  booktitle   = {Proceedings of the {Tenth} {Annual} {Conference} on {Advances} in {Cognitive} {Systems}},
+  author      = {Vasanth Sarathy and Mark Burstein and Scott Friedman and Robert Bobrow and Ugur Kuter},
+  abbr        = {ACS},
+  year        = {2022},
+  theme       = {socialreasoning},
+  pdf         = {sarathyargumentation2022},
+  abstract    = {Making and evaluating arguments is an important cognitive capability that plays a vital role in human cooperation by allowing us to communicate beliefs and persuade others. In this paper, we ask
+                 how can machines comprehend arguments. Research in computational argumentation has a rich
+                 history of addressing questions about the abstract dynamics of argumentation and how argument
+                 structures can be mined from text. However, what is missing is an integrated cognitive system that
+                 provides a computational account for how we might intuitively make sense of arguments. Work in
+                 cognitive psychology has suggested that when presented with a novel argument, humans interpret
+                 the language and produce acceptability/coherence judgments intuitively. In this paper, we introduce SKEPTIC, a computational implementation of the process of intuitive argumentation, combining modern deep neural networks and natural language processing techniques with established
+                 cognitive systems principles. We describe an architecture and an algorithm for extracting graphlike argument structures from raw unstructured text as well as retrieving implicit assumptions that
+                 support the argument. Being able to extract arguments and their implicit assumptions will be able
+                 to help us detect misinformation, reduce polarization, understand social and cultural rationales, and
+                 assist with critical thinking and persuasive writing.},
+  bibtex_show = true
 }
 
 @inproceedings{geibportalsspaces2022,
-	title={Portals and Spaces: An Egocentric
-		Knowledge Representation for Reasoning about Actions and its
-			Implementation},
-	language = {en},
-	booktitle = {Proceedings of the {Tenth} {Annual} {Conference} on {Advances} in {Cognitive} {Systems}},
-	author = {Christopher Geib and Jeffrey Rye and Vasanth Sarathy},
-  abbr={ACS},
-	year = {2022},
-	theme={problemsolving},
-  bibtex_show=true,
-  pdf={geibportalsspaces2022.pdf},
-  abstract={While there is significant research in the psychology literature that human’s use of egocentric representations of space, almost all work in AI plan recognition and planning has assumed access to
-universal coordinate frames, or allocentric representations of space. Reasoning with such allocentric representations actually makes some kinds of inference more difficult, and seems to conflict
-with current models of embodied agents informing robotics. This paper presents first steps toward
-formulating a useable egocentric representation of domains for AI plan recognition and planning
-based on Portals and Spaces. This representation will allow for the integration of high level AI
-reasoning with low level continuous control and reasoning systems like those found in modern
-robotics and virtual environments. We will show how portals and spaces have been added to the
-ASISTANT system developed on the DARPA ASIST project.}
+  title       = {Portals and Spaces: An Egocentric
+                 Knowledge Representation for Reasoning about Actions and its
+                 Implementation},
+  language    = {en},
+  booktitle   = {Proceedings of the {Tenth} {Annual} {Conference} on {Advances} in {Cognitive} {Systems}},
+  author      = {Christopher Geib and Jeffrey Rye and Vasanth Sarathy},
+  abbr        = {ACS},
+  year        = {2022},
+  theme       = {problemsolving},
+  bibtex_show = true,
+  pdf         = {geibportalsspaces2022.pdf},
+  abstract    = {While there is significant research in the psychology literature that human’s use of egocentric representations of space, almost all work in AI plan recognition and planning has assumed access to
+                 universal coordinate frames, or allocentric representations of space. Reasoning with such allocentric representations actually makes some kinds of inference more difficult, and seems to conflict
+                 with current models of embodied agents informing robotics. This paper presents first steps toward
+                 formulating a useable egocentric representation of domains for AI plan recognition and planning
+                 based on Portals and Spaces. This representation will allow for the integration of high level AI
+                 reasoning with low level continuous control and reasoning systems like those found in modern
+                 robotics and virtual environments. We will show how portals and spaces have been added to the
+                 ASISTANT system developed on the DARPA ASIST project.}
 }
 @inproceedings{benkler2022cultural,
-  title={Cultural Value Resonance in Folktales: A
-	  Transformer-Based Analysis with the World Value Corpus},
-  author={Noam Benkler and Scott Friedman and Sonja Schmer-Galunder and Drisana Mosaphir and Vasanth Sarathy and Pavan Kantharaju and Matthew McLure and Robert P Goldman},
-  booktitle={International Conference on Social Computing, Behavioral-Cultural Modeling and Prediction and Behavior Representation in Modeling and Simulation},
-  pages={209--218},
-  year={2022},
-  abbr={SBP-BRiMS},
-  organization={Springer},
-  theme={socialnlp},
-  bibtex_show=true,
-  html={https://dl.acm.org/doi/abs/10.1007/978-3-031-17114-7_20},
-  abstract={Although implicit cultural values are reflected in human narrative texts, few robust computational solutions exist to recognize values that resonate within these texts. In other words, given a statement text and a value text, the task is to predict the label that resonates, conflicts or is neutral with respect to the value. In this paper, we present a novel, annotated dataset and transformer-based model for Recognizing Value Resonance (RVR). We created the World Values Corpus (WVC): a labeled collection of [statement, value] pairs of text based on the World Values Survey (WVS), which is a well-validated, comprehensive survey for assessing values across cultures. Each pair expresses whether the value resonates with, conflicts with, or is neutral to the statement. The 384 values in the WVC are derived from the WVS to assure the WVC’s cross-cultural relevance. The statement pairs for each value were generated by a pool of six annotators across genders and cultural backgrounds. We demonstrate that off-the-shelf Recognizing Textual Entailment (RTE) models perform unfavorably on the RVR task. However, RTE models trained on the WVC achieve substantially higher accuracy on RVR, serving as a strong, replicable baseline for future RVR work, advancing the study of cultural values using computational NLP approaches. We also present results of applying our baseline model on the “World of Tales” corpus, an online repository of international folktales. The results suggest that such a model can provide useful anthropological insights, which in turn is an important step towards facilitating automated ethnographic modeling.}
+  title        = {Cultural Value Resonance in Folktales: A
+                  Transformer-Based Analysis with the World Value Corpus},
+  author       = {Noam Benkler and Scott Friedman and Sonja Schmer-Galunder and Drisana Mosaphir and Vasanth Sarathy and Pavan Kantharaju and Matthew McLure and Robert P Goldman},
+  booktitle    = {International Conference on Social Computing, Behavioral-Cultural Modeling and Prediction and Behavior Representation in Modeling and Simulation},
+  pages        = {209--218},
+  year         = {2022},
+  abbr         = {SBP-BRiMS},
+  organization = {Springer},
+  theme        = {socialnlp},
+  bibtex_show  = true,
+  html         = {https://dl.acm.org/doi/abs/10.1007/978-3-031-17114-7_20},
+  abstract     = {Although implicit cultural values are reflected in human narrative texts, few robust computational solutions exist to recognize values that resonate within these texts. In other words, given a statement text and a value text, the task is to predict the label that resonates, conflicts or is neutral with respect to the value. In this paper, we present a novel, annotated dataset and transformer-based model for Recognizing Value Resonance (RVR). We created the World Values Corpus (WVC): a labeled collection of [statement, value] pairs of text based on the World Values Survey (WVS), which is a well-validated, comprehensive survey for assessing values across cultures. Each pair expresses whether the value resonates with, conflicts with, or is neutral to the statement. The 384 values in the WVC are derived from the WVS to assure the WVC’s cross-cultural relevance. The statement pairs for each value were generated by a pool of six annotators across genders and cultural backgrounds. We demonstrate that off-the-shelf Recognizing Textual Entailment (RTE) models perform unfavorably on the RVR task. However, RTE models trained on the WVC achieve substantially higher accuracy on RVR, serving as a strong, replicable baseline for future RVR work, advancing the study of cultural values using computational NLP approaches. We also present results of applying our baseline model on the “World of Tales” corpus, an online repository of international folktales. The results suggest that such a model can provide useful anthropological insights, which in turn is an important step towards facilitating automated ethnographic modeling.}
 }
 
 @inproceedings{sarathybiplex2022,
-	title = {{BIPLEX}: {Creative}
-		{Problem}-{Solving} by {Planning} for {Experimentation}},
-	language = {en},
-	booktitle = {13th {International} {Conference} on {Computational} {Creativity}},
-	author = {Vasanth Sarathy and Mathias Scheutz},
-	month = jul,
-	year = {2022},
-  abbr={ICCC},
-	pages = {9},
-	theme={problemsolving},
-  bibtex_show=true,
-  pdf={sarathybiplex2022.pdf},
-  abstract={Creative problem-solving in humans often involves realworld experimentation and observation of outcomes that then
-leads to the discovery of solutions or possibly further experiments. Yet, most work on creative problem-solving in AI
-has focused on solely mental processes like variants of search
-and reasoning for finding solutions. In this position paper, we
-propose a novel algorithmic framework called BIPLEX that
-is closer to how humans solve problems creatively in that
-it involves hypothesis generation, experimentation, and outcome observation as part of the search for solutions. We introduce BIPLEX through various examples in a baking domain that demonstrate important features of the framework,
-including its representation of objects in terms of properties, as well its ability to interleave planning for experimentation and outcome evaluation when execution impasses are detected, which can lead to novel solution paths. We argue that
-these features are essentially required for solving problems
-that cannot be solved by search alone and thus most existing
-creative problem-solving approaches.}
+  title       = {{BIPLEX}: {Creative}
+                 {Problem}-{Solving} by {Planning} for {Experimentation}},
+  language    = {en},
+  booktitle   = {13th {International} {Conference} on {Computational} {Creativity}},
+  author      = {Vasanth Sarathy and Mathias Scheutz},
+  month       = jul,
+  year        = {2022},
+  abbr        = {ICCC},
+  pages       = {9},
+  theme       = {problemsolving},
+  bibtex_show = true,
+  pdf         = {sarathybiplex2022.pdf},
+  abstract    = {Creative problem-solving in humans often involves realworld experimentation and observation of outcomes that then
+                 leads to the discovery of solutions or possibly further experiments. Yet, most work on creative problem-solving in AI
+                 has focused on solely mental processes like variants of search
+                 and reasoning for finding solutions. In this position paper, we
+                 propose a novel algorithmic framework called BIPLEX that
+                 is closer to how humans solve problems creatively in that
+                 it involves hypothesis generation, experimentation, and outcome observation as part of the search for solutions. We introduce BIPLEX through various examples in a baking domain that demonstrate important features of the framework,
+                 including its representation of objects in terms of properties, as well its ability to interleave planning for experimentation and outcome evaluation when execution impasses are detected, which can lead to novel solution paths. We argue that
+                 these features are essentially required for solving problems
+                 that cannot be solved by search alone and thus most existing
+                 creative problem-solving approaches.}
 }
 @inproceedings{goel2022rapid,
-  title={RAPid-Learn: A Framework for Learning to
-	  Recover for Handling Novelties in Open-World Environments},
-  author={Shivam Goel and Yash Shukla and Vasanth Sarathy and Matthias Scheutz and Jivko Sinapov},
-  booktitle={2022 IEEE International Conference on Development and Learning},
-  year={2022},
-  abbr={ICDL},
-  organization={IEEE},
-  theme={problemsolving},
-  bibtex_show=true,
-  arxiv={2206.12493},
-  abstract={We propose RAPid-Learn: Learning to Recover and Plan Again, a hybrid planning and learning method, to tackle the problem of adapting to sudden and unexpected changes in an agent's environment (i.e., novelties). RAPid-Learn is designed to formulate and solve modifications to a task's Markov Decision Process (MDPs) on-the-fly and is capable of exploiting domain knowledge to learn any new dynamics caused by the environmental changes. It is capable of exploiting the domain knowledge to learn action executors which can be further used to resolve execution impasses, leading to a successful plan execution. This novelty information is reflected in its updated domain model. We demonstrate its efficacy by introducing a wide variety of novelties in a gridworld environment inspired by Minecraft, and compare our algorithm with transfer learning baselines from the literature. Our method is (1) effective even in the presence of multiple novelties, (2) more sample efficient than transfer learning RL baselines, and (3) robust to incomplete model information, as opposed to pure symbolic planning approaches.},
-  pdf={goel2022rapid.pdf}
+  title        = {RAPid-Learn: A Framework for Learning to
+                  Recover for Handling Novelties in Open-World Environments},
+  author       = {Shivam Goel and Yash Shukla and Vasanth Sarathy and Matthias Scheutz and Jivko Sinapov},
+  booktitle    = {2022 IEEE International Conference on Development and Learning},
+  year         = {2022},
+  abbr         = {ICDL},
+  organization = {IEEE},
+  theme        = {problemsolving},
+  bibtex_show  = true,
+  arxiv        = {2206.12493},
+  abstract     = {We propose RAPid-Learn: Learning to Recover and Plan Again, a hybrid planning and learning method, to tackle the problem of adapting to sudden and unexpected changes in an agent's environment (i.e., novelties). RAPid-Learn is designed to formulate and solve modifications to a task's Markov Decision Process (MDPs) on-the-fly and is capable of exploiting domain knowledge to learn any new dynamics caused by the environmental changes. It is capable of exploiting the domain knowledge to learn action executors which can be further used to resolve execution impasses, leading to a successful plan execution. This novelty information is reflected in its updated domain model. We demonstrate its efficacy by introducing a wide variety of novelties in a gridworld environment inspired by Minecraft, and compare our algorithm with transfer learning baselines from the literature. Our method is (1) effective even in the presence of multiple novelties, (2) more sample efficient than transfer learning RL baselines, and (3) robust to incomplete model information, as opposed to pure symbolic planning approaches.},
+  pdf          = {goel2022rapid.pdf}
 }
 
 % 2021
 
 @inproceedings{friedmanunstructured2021,
-	title = {From {Unstructured} {Text} to {Causal} {Knowledge} {Graphs}: {A} {Transformer}-{Based} {Approach}},
-	language = {en},
-	booktitle = {Proceedings of the {Ninth} {Annual} {Conference} on {Advances} in {Cognitive} {Systems}},
-	author = {Scott Friedman and Ian Magnusson and Vasanth Sarathy and Sonja Schmer-Galunder},
-	year = {2021},
-	pages = {18},
-	abbr={ACS},
-	theme={socialnlp},
-  bibtex_show=true,
-  arxiv={2202.11768},
-  pdf={friedmanunstructured2021.pdf},
-  abstract={Qualitative causal relationships compactly express the direction, dependency, temporal constraints, and monotonicity constraints of discrete or continuous interactions in the world. In everyday or academic language, we may express interactions between quantities (e.g., sleep decreases stress), between discrete events or entities (e.g., a protein inhibits another protein's transcription), or between intentional or functional factors (e.g., hospital patients pray to relieve their pain). Extracting and representing these diverse causal relations are critical for cognitive systems that operate in domains spanning from scientific discovery to social science. This paper presents a transformer-based NLP architecture that jointly extracts knowledge graphs including (1) variables or factors described in language, (2) qualitative causal relationships over these variables, (3) qualifiers and magnitudes that constrain these causal relationships, and (4) word senses to localize each extracted node within a large ontology. We do not claim that our transformer-based architecture is itself a cognitive system; however, we provide evidence of its accurate knowledge graph extraction in real-world domains and the practicality of its resulting knowledge graphs for cognitive systems that perform graph-based reasoning. We demonstrate this approach and include promising results in two use cases, processing textual inputs from academic publications, news articles, and social media.}
+  title       = {From {Unstructured} {Text} to {Causal} {Knowledge} {Graphs}: {A} {Transformer}-{Based} {Approach}},
+  language    = {en},
+  booktitle   = {Proceedings of the {Ninth} {Annual} {Conference} on {Advances} in {Cognitive} {Systems}},
+  author      = {Scott Friedman and Ian Magnusson and Vasanth Sarathy and Sonja Schmer-Galunder},
+  year        = {2021},
+  pages       = {18},
+  abbr        = {ACS},
+  theme       = {socialnlp},
+  bibtex_show = true,
+  arxiv       = {2202.11768},
+  pdf         = {friedmanunstructured2021.pdf},
+  abstract    = {Qualitative causal relationships compactly express the direction, dependency, temporal constraints, and monotonicity constraints of discrete or continuous interactions in the world. In everyday or academic language, we may express interactions between quantities (e.g., sleep decreases stress), between discrete events or entities (e.g., a protein inhibits another protein's transcription), or between intentional or functional factors (e.g., hospital patients pray to relieve their pain). Extracting and representing these diverse causal relations are critical for cognitive systems that operate in domains spanning from scientific discovery to social science. This paper presents a transformer-based NLP architecture that jointly extracts knowledge graphs including (1) variables or factors described in language, (2) qualitative causal relationships over these variables, (3) qualifiers and magnitudes that constrain these causal relationships, and (4) word senses to localize each extracted node within a large ontology. We do not claim that our transformer-based architecture is itself a cognitive system; however, we provide evidence of its accurate knowledge graph extraction in real-world domains and the practicality of its resulting knowledge graphs for cognitive systems that perform graph-based reasoning. We demonstrate this approach and include promising results in two use cases, processing textual inputs from academic publications, news articles, and social media.}
 }
 
 @inproceedings{sarathy2021aamas,
-  title={SPOTTER: Extending Symbolic Planning Operators through Targeted Reinforcement Learning},
-  author={Vasanth Sarathy and Daniel Kasenberg and Shivam Goel and Jivko Sinapov and Matthias Scheutz},
-  booktitle={Proceedings of the 20th International Conference on Autonomous Agents and Multiagent Systems},
-  year={2021},
-  abbr={AAMAS},
-  bibtex_show=true,
-  theme={problemsolving},
-  bibtex_show=true,
-  pdf={sarathy2021aamas.pdf},
-  abstract={Symbolic planning models allow decision-making agents to sequence actions in arbitrary ways to achieve a variety of goals in dynamic domains. However, they are typically handcrafted and tend to require precise formulations that are not robust to human error. Reinforcement learning (RL) approaches do not require such models, and instead learn domain dynamics by exploring the environment and collecting rewards. However, RL approaches tend to require millions of episodes of experience and often learn policies that are not easily transferable to other tasks. In this paper, we address one aspect of the open problem of integrating these approaches: how can decision-making agents resolve discrepancies in their symbolic planning models while attempting to accomplish goals? We propose an integrated framework named SPOTTER that uses RL to augment and support ("spot") a planning agent by discovering new operators needed by the agent to accomplish goals that are initially unreachable for the agent. SPOTTER outperforms pure-RL approaches while also discovering transferable symbolic knowledge and does not require supervision, successful plan traces or any a priori knowledge about the missing planning operator.},
-  arxiv={2012.13037}
+  title       = {SPOTTER: Extending Symbolic Planning Operators through Targeted Reinforcement Learning},
+  author      = {Vasanth Sarathy and Daniel Kasenberg and Shivam Goel and Jivko Sinapov and Matthias Scheutz},
+  booktitle   = {Proceedings of the 20th International Conference on Autonomous Agents and Multiagent Systems},
+  year        = {2021},
+  abbr        = {AAMAS},
+  bibtex_show = true,
+  theme       = {problemsolving},
+  bibtex_show = true,
+  pdf         = {sarathy2021aamas.pdf},
+  abstract    = {Symbolic planning models allow decision-making agents to sequence actions in arbitrary ways to achieve a variety of goals in dynamic domains. However, they are typically handcrafted and tend to require precise formulations that are not robust to human error. Reinforcement learning (RL) approaches do not require such models, and instead learn domain dynamics by exploring the environment and collecting rewards. However, RL approaches tend to require millions of episodes of experience and often learn policies that are not easily transferable to other tasks. In this paper, we address one aspect of the open problem of integrating these approaches: how can decision-making agents resolve discrepancies in their symbolic planning models while attempting to accomplish goals? We propose an integrated framework named SPOTTER that uses RL to augment and support ("spot") a planning agent by discovering new operators needed by the agent to accomplish goals that are initially unreachable for the agent. SPOTTER outperforms pure-RL approaches while also discovering transferable symbolic knowledge and does not require supervision, successful plan traces or any a priori knowledge about the missing planning operator.},
+  arxiv       = {2012.13037}
 }
 
 @inproceedings{muhammadetal21aamas,
-title = {A Novelty-Centric Agent Architecture for Changing Worlds},
-author = {Faizan Muhammad and Vasanth Sarathy and Gyan Tatiya and Shivam Goel and Saurav Gyawali and Mateo Guaman and Jivko Sinapov and Matthias Scheutz},
-booktitle = {Proceedings of 20th International Conference on Autonomous Agents and Multiagent Systems},
-year = {2021},
-abbr={AAMAS},
-theme={problemsolving},
-  bibtex_show=true,
-  html={https://dl.acm.org/doi/10.5555/3463952.3464062},
-  pdf={},
-  abstract={Open-world AI requires artificial agents to cope with novelties that arise during task performance, i.e., they must (1) detect novelties, (2) characterize them, in order to (3) accommodate them, especially in cases where sudden changes to the environment make task accomplishment impossible without utilizing the novelty. We present a formal framework and implementation thereof in a cognitive agent for novelty handling and demonstrate the efficacy of the proposed methods for detecting and handling a large set of novelties in a crafting task in a simulated environment. We discuss the success of the proposed knowledge-based methods and propose heuristic extensions that will further improve novelty handling in open-worlds tasks.}
+  title       = {A Novelty-Centric Agent Architecture for Changing Worlds},
+  author      = {Faizan Muhammad and Vasanth Sarathy and Gyan Tatiya and Shivam Goel and Saurav Gyawali and Mateo Guaman and Jivko Sinapov and Matthias Scheutz},
+  booktitle   = {Proceedings of 20th International Conference on Autonomous Agents and Multiagent Systems},
+  year        = {2021},
+  abbr        = {AAMAS},
+  theme       = {problemsolving},
+  bibtex_show = true,
+  html        = {https://dl.acm.org/doi/10.5555/3463952.3464062},
+  pdf         = {},
+  abstract    = {Open-world AI requires artificial agents to cope with novelties that arise during task performance, i.e., they must (1) detect novelties, (2) characterize them, in order to (3) accommodate them, especially in cases where sudden changes to the environment make task accomplishment impossible without utilizing the novelty. We present a formal framework and implementation thereof in a cognitive agent for novelty handling and demonstrate the efficacy of the proposed methods for detecting and handling a large set of novelties in a crafting task in a simulated environment. We discuss the success of the proposed knowledge-based methods and propose heuristic extensions that will further improve novelty handling in open-worlds tasks.}
 }
 
 % 2020
 
 @inproceedings{sarathy2020reasoning,
-  title = {Reasoning Requirements for Indirect Speech Act Interpretation},
-  author = {Vasanth Sarathy and Alexander Tsuetaki and Antonio Roque and Matthias Scheutz},
-  booktitle = {Proceedings of the 28th International Conference on Computational Linguistics},
-  year = {2020},
-  abbr={COLING},
-  theme={socialreasoning},
-  bibtex_show=true,
-  html={https://aclanthology.org/2020.coling-main.433/},
-  abstract={We perform a corpus analysis to develop a representation of the knowledge and reasoning used to interpret indirect speech acts. An indirect speech act (ISA) is an utterance whose intended meaning is different from its literal meaning. We focus on those speech acts in which slight changes in situational or contextual information can switch the dominant intended meaning of an utterance from direct to indirect or vice-versa. We computationalize how various contextual features can influence a speaker’s beliefs, and how these beliefs can influence the intended meaning and choice of the surface form of an utterance. We axiomatize the domain-general patterns of reasoning involved, and implement a proof-of-concept architecture using Answer Set Programming. Our model is presented as a contribution to cognitive science and psycholinguistics, so representational decisions are justified by existing theoretical work.},
-  pdf={sarathy2020reasoning}
-
+  title       = {Reasoning Requirements for Indirect Speech Act Interpretation},
+  author      = {Vasanth Sarathy and Alexander Tsuetaki and Antonio Roque and Matthias Scheutz},
+  booktitle   = {Proceedings of the 28th International Conference on Computational Linguistics},
+  year        = {2020},
+  abbr        = {COLING},
+  theme       = {socialreasoning},
+  bibtex_show = true,
+  html        = {https://aclanthology.org/2020.coling-main.433/},
+  abstract    = {We perform a corpus analysis to develop a representation of the knowledge and reasoning used to interpret indirect speech acts. An indirect speech act (ISA) is an utterance whose intended meaning is different from its literal meaning. We focus on those speech acts in which slight changes in situational or contextual information can switch the dominant intended meaning of an utterance from direct to indirect or vice-versa. We computationalize how various contextual features can influence a speaker’s beliefs, and how these beliefs can influence the intended meaning and choice of the surface form of an utterance. We axiomatize the domain-general patterns of reasoning involved, and implement a proof-of-concept architecture using Answer Set Programming. Our model is presented as a contribution to cognitive science and psycholinguistics, so representational decisions are justified by existing theoretical work.},
+  pdf         = {sarathy2020reasoning}
 }
 
 @inproceedings{roqueISASchema2020,
-	title={Developing a Corpus of Indirect Speech
-		Act Schemas},
-	author={Antonio Roque and Alexander Tsuetaki and Vasanth Sarathy and Matthias Scheutz},
-	booktitle={Proceedings of the Twelveth International Conference on Language
-			Resources and Evaluation},
-	year={2020},
-	abbr={LREC},
-	theme={socialnlp},
-  bibtex_show=true,
-  html={https://aclanthology.org/2020.lrec-1.28/},
-  abstract={Resolving Indirect Speech Acts (ISAs), in which the intended meaning of an utterance is not identical to its literal meaning, is essential to enabling the participation of intelligent systems in peoples’ everyday lives. Especially challenging are those cases in which the interpretation of such ISAs depends on context. To test a system’s ability to perform ISA resolution we need a corpus, but developing such a corpus is difficult, especialy given the contex-dependent requirement. This paper addresses the difficult problems of constructing a corpus of ISAs, taking inspiration from relevant work in using corpora for reasoning tasks. We present a formal representation of ISA Schemas required for such testing, including a measure of the difficulty of a particular schema. We develop an approach to authoring these schemas using corpus analysis and crowdsourcing, to maximize realism and minimize the amount of expert authoring needed. Finally, we describe several characteristics of collected data, and potential future work.},
-  pdf={roqueISASchema2020.pdf},
+  title       = {Developing a Corpus of Indirect Speech
+                 Act Schemas},
+  author      = {Antonio Roque and Alexander Tsuetaki and Vasanth Sarathy and Matthias Scheutz},
+  booktitle   = {Proceedings of the Twelveth International Conference on Language
+                 Resources and Evaluation},
+  year        = {2020},
+  abbr        = {LREC},
+  theme       = {socialnlp},
+  bibtex_show = true,
+  html        = {https://aclanthology.org/2020.lrec-1.28/},
+  abstract    = {Resolving Indirect Speech Acts (ISAs), in which the intended meaning of an utterance is not identical to its literal meaning, is essential to enabling the participation of intelligent systems in peoples’ everyday lives. Especially challenging are those cases in which the interpretation of such ISAs depends on context. To test a system’s ability to perform ISA resolution we need a corpus, but developing such a corpus is difficult, especialy given the contex-dependent requirement. This paper addresses the difficult problems of constructing a corpus of ISAs, taking inspiration from relevant work in using corpora for reasoning tasks. We present a formal representation of ISA Schemas required for such testing, including a measure of the difficulty of a particular schema. We develop an approach to authoring these schemas using corpus analysis and crowdsourcing, to maximize realism and minimize the amount of expert authoring needed. Finally, we describe several characteristics of collected data, and potential future work.},
+  pdf         = {roqueISASchema2020.pdf}
 }
 
 @phdthesis{sarathy2020sense,
-  title={Sense-Making Machines},
-  author={Sarathy, Vasanth},
-  year={2020},
-  school={Tufts University},
-  theme={socialreasoning},
-  bibtex_show=true,
-  abbr={PhD. Thesis},
-  html={https://login.ezproxy.library.tufts.edu/login?url=https://www-proquest-com.ezproxy.library.tufts.edu/dissertations-theses/sense-making-machines/docview/2457553435/se-2?accountid=14434},
-  pdf={sarathy2020sense.pdf},
-  abstract={Although statistical machine learning techniques have led to significant advances in AI systems, they are still far from demonstrating fundamental intelligence capabilities possessed by human toddlers and even some animals. After decades of research and millennia of scientific and philosophical thought, the central goals of AI -- to explain and replicate human intelligence and creativity -- still remain unmet. In this thesis, I argue for instilling in AI systems, the ability to continually "make sense" of its changing world to guide behavior and understand perceptual information. Different from current mainstream AI approaches, I propose that agents maintain and update mental representations of the world that allow them to reason about symbolic concepts under uncertainty. I show that such representations and inference machinery are needed at all levels of cognitive processing -- from language interpretation, basic visual perception and action selection to high-level deliberation and even creative problem-solving. In the latter, sense-making becomes sense-breaking, in which I demonstrate how an agent can break its own assumptions and biases in order to discover novel ideas and solutions. Symbolic representations allow an agent to reason beyond statistical patterns, verify the veracity of their knowledge, recognize gaps in their understanding, raise questions, and explore the world to seek out answers. In doing so, such representations also allow artificial agents to provide us, humans, explanations of their behaviors, allow us to better interpret and understand their actions, and ensure that they comply with our social norms.}
+  title       = {Sense-Making Machines},
+  author      = {Sarathy, Vasanth},
+  year        = {2020},
+  school      = {Tufts University},
+  theme       = {socialreasoning},
+  bibtex_show = true,
+  abbr        = {PhD. Thesis},
+  html        = {https://login.ezproxy.library.tufts.edu/login?url=https://www-proquest-com.ezproxy.library.tufts.edu/dissertations-theses/sense-making-machines/docview/2457553435/se-2?accountid=14434},
+  pdf         = {sarathy2020sense.pdf},
+  abstract    = {Although statistical machine learning techniques have led to significant advances in AI systems, they are still far from demonstrating fundamental intelligence capabilities possessed by human toddlers and even some animals. After decades of research and millennia of scientific and philosophical thought, the central goals of AI -- to explain and replicate human intelligence and creativity -- still remain unmet. In this thesis, I argue for instilling in AI systems, the ability to continually "make sense" of its changing world to guide behavior and understand perceptual information. Different from current mainstream AI approaches, I propose that agents maintain and update mental representations of the world that allow them to reason about symbolic concepts under uncertainty. I show that such representations and inference machinery are needed at all levels of cognitive processing -- from language interpretation, basic visual perception and action selection to high-level deliberation and even creative problem-solving. In the latter, sense-making becomes sense-breaking, in which I demonstrate how an agent can break its own assumptions and biases in order to discover novel ideas and solutions. Symbolic representations allow an agent to reason beyond statistical patterns, verify the veracity of their knowledge, recognize gaps in their understanding, raise questions, and explore the world to seek out answers. In doing so, such representations also allow artificial agents to provide us, humans, explanations of their behaviors, allow us to better interpret and understand their actions, and ensure that they comply with our social norms.}
 }
 
 
 % 2019
 
 @article{sarathythri2019,
- author = {Vasanth Sarathy and Thomas Arnold and Matthias Scheutz},
- title = {When Exceptions Are the Norm: Exploring
-		  the Role of Consent in HRI},
- journal = {ACM Transactions on Human-Robot Interaction (Formerly, Journal of
-			Human-Robot Interaction)},
- issue_date = {August 2019},
- volume = {8},
- number = {3},
- month = jul,
- year = {2019},
- pages = {14:1--14:21},
- articleno = {14},
- numpages = {21},
- publisher = {ACM},
- address = {New York, NY, USA},
- abbr={THRI},
- theme={socialreasoning},
- pdf={sarathythri2019.pdf},
- bibtex_show=true,
- abstract={HRI researchers have made major strides in developing robotic architectures that are capable of reading a limited set of social cues and producing behaviors that enhance their likeability and feeling of comfort amongst humans. However, the cues in these models are fairly direct and the interactions largely dyadic. To capture the normative qualities of interaction more robustly, we propose “consent” as a distinct, critical area for HRI research. Convening important insights in existing HRI work around topics like touch, proxemics, gaze, and moral norms, the notion of consent reveals key expectations that can shape how a robot acts in social spaces. Consent need not be limited to just an explicit permission given in ethically charged or normatively risky scenarios. Instead, it is a richer notion, one that covers even implicit acquiescence in scenarios that otherwise seem normatively neutral. By sorting various kinds of consent through social and legal doctrine, we delineate empirical and technical questions to meet consent challenges faced in major application domains and robotic roles. Attention to consent could show, for example, how extraordinary, norm-violating actions can be justified by agents and accepted by those around them. We argue that operationalizing ideas from legal scholarship can better guide how robotic systems might cultivate and sustain proper forms of consent.},
- html={https://dl.acm.org/doi/abs/10.1145/3341166}
+  author      = {Vasanth Sarathy and Thomas Arnold and Matthias Scheutz},
+  title       = {When Exceptions Are the Norm: Exploring
+                 the Role of Consent in HRI},
+  journal     = {ACM Transactions on Human-Robot Interaction (Formerly, Journal of
+                 Human-Robot Interaction)},
+  issue_date  = {August 2019},
+  volume      = {8},
+  number      = {3},
+  month       = jul,
+  year        = {2019},
+  pages       = {14:1--14:21},
+  articleno   = {14},
+  numpages    = {21},
+  publisher   = {ACM},
+  address     = {New York, NY, USA},
+  abbr        = {THRI},
+  theme       = {socialreasoning},
+  pdf         = {sarathythri2019.pdf},
+  bibtex_show = true,
+  abstract    = {HRI researchers have made major strides in developing robotic architectures that are capable of reading a limited set of social cues and producing behaviors that enhance their likeability and feeling of comfort amongst humans. However, the cues in these models are fairly direct and the interactions largely dyadic. To capture the normative qualities of interaction more robustly, we propose “consent” as a distinct, critical area for HRI research. Convening important insights in existing HRI work around topics like touch, proxemics, gaze, and moral norms, the notion of consent reveals key expectations that can shape how a robot acts in social spaces. Consent need not be limited to just an explicit permission given in ethically charged or normatively risky scenarios. Instead, it is a richer notion, one that covers even implicit acquiescence in scenarios that otherwise seem normatively neutral. By sorting various kinds of consent through social and legal doctrine, we delineate empirical and technical questions to meet consent challenges faced in major application domains and robotic roles. Attention to consent could show, for example, how extraordinary, norm-violating actions can be justified by agents and accepted by those around them. We argue that operationalizing ideas from legal scholarship can better guide how robotic systems might cultivate and sustain proper forms of consent.},
+  html        = {https://dl.acm.org/doi/abs/10.1145/3341166}
 } 
 
-@InCollection{scheutzetal2019diarcchapter,
-    author={Matthias Scheutz and Thomas Williams and Evan Krause and Bradley
-			Oosterveld and Vasanth Sarathy and Tyler Frasca},
-    title={An Overview of the Distributed
-		   Integrated Affect and Reflection Cognitive DIARC Architecture},
-    booktitle={Cognitive Architectures},
-  pages={165--193},
-  year={2019},
-  publisher={Springer},
-  theme={socialreasoning},
-  pdf={scheutzetal2019diarcchapter.pdf},
-  abbr={Cog. Arch.},
-  bibtex_show=true,
-  abstract={DIARC has been under development for over 15 years. Different from other cognitive architectures like SOAR or ACT-R, DIARC is an intrinsically component-based distributed architecture scheme that can be instantiated in many different ways. Moreover, DIARC has several distinguishing features, such as affect processing and deep natural language integration, is open-world and multi-agent enabled, and allows for “one-shot instruction-based learning” of new percepts, actions, concepts, rules, and norms. In this chapter, we will present an overview of the DIARC architecture and compare it to classical cognitive architectures. After laying out the theoretical foundations, we specifically focus on the action, vision, and natural language subsystems. We then give two examples of DIARC configurations for “one-shot learning” and “component-sharing”. We also briefly mention different use cases of DIARC, in particular, for autonomous robots in human-robot interaction experiments and for building cognitive models.},
-  html={https://link.springer.com/chapter/10.1007/978-3-319-97550-4_11}
-  }
-
-@InProceedings{sarathyscheutzaai2019,
-author={Vasanth Sarathy and Matthias Scheutz},
-title={On Resolving Ambiguous Anaphoric Expressions
-	   in Imperative Discourse},
-booktitle={Proceedings of the Thirty-Third AAAI Conference on Artificial Intelligence},
-year={2019},
-abbr={AAAI},
-theme={socialreasoning},
-  bibtex_show=true,
-  html={https://ojs.aaai.org/index.php/AAAI/article/view/4674},
-  abstract={Anaphora resolution is a central problem in natural language understanding. We study a subclass of this problem involving object pronouns when they are used in simple imperative sentences (e.g., “pick it up.”). Specifically, we address cases where situational and contextual information is required to interpret these pronouns. Current state-of-the art statisticallydriven coreference systems and knowledge-based reasoning systems are insufficient to address these cases. In this paper, we introduce, with examples, a general class of situated anaphora resolution problems, propose a proof-of-concept system for disambiguating situated pronouns, and discuss some general types of reasoning that might be needed.},
-  pdf={sarathyscheutzaai2019.pdf}
-
+@incollection{scheutzetal2019diarcchapter,
+  author      = {Matthias Scheutz and Thomas Williams and Evan Krause and Bradley
+                 Oosterveld and Vasanth Sarathy and Tyler Frasca},
+  title       = {An Overview of the Distributed
+                 Integrated Affect and Reflection Cognitive DIARC Architecture},
+  booktitle   = {Cognitive Architectures},
+  pages       = {165--193},
+  year        = {2019},
+  publisher   = {Springer},
+  theme       = {socialreasoning},
+  pdf         = {scheutzetal2019diarcchapter.pdf},
+  abbr        = {Cog. Arch.},
+  bibtex_show = true,
+  abstract    = {DIARC has been under development for over 15 years. Different from other cognitive architectures like SOAR or ACT-R, DIARC is an intrinsically component-based distributed architecture scheme that can be instantiated in many different ways. Moreover, DIARC has several distinguishing features, such as affect processing and deep natural language integration, is open-world and multi-agent enabled, and allows for “one-shot instruction-based learning” of new percepts, actions, concepts, rules, and norms. In this chapter, we will present an overview of the DIARC architecture and compare it to classical cognitive architectures. After laying out the theoretical foundations, we specifically focus on the action, vision, and natural language subsystems. We then give two examples of DIARC configurations for “one-shot learning” and “component-sharing”. We also briefly mention different use cases of DIARC, in particular, for autonomous robots in human-robot interaction experiments and for building cognitive models.},
+  html        = {https://link.springer.com/chapter/10.1007/978-3-319-97550-4_11}
 }
 
-@InProceedings{govindarajuluetalaies2019,
-title={Towards the Engineering of Virtuous
-	   Machines},
-author={Naveen Sundar Govindarajulu and Selmer Bringsjord and Rikhiya Ghosh and
-		Vasanth Sarathy},
-booktitle={Proceedings of the 2nd AAAI/ACM Conference on Artificial Intelligence, Ethics, and Society},
-year={2019},
-abbr={AIES},
-theme={socialreasoning},
-  bibtex_show=true,
-  html={https://dl.acm.org/doi/10.1145/3306618.3314256},
-  abstract={While various traditions under the 'virtue ethics' umbrella have been studied extensively and advocated by ethicists, it has not been clear that there exists a version of virtue ethics rigorous enough to be a target for machine ethics (which we take to include the engineering of an ethical sensibility in a machine or robot itself, not only the study of ethics in the humans who might create artificial agents). We begin to address this by presenting an embryonic formalization of a key part of any virtue-ethics theory: namely, the learning of virtue by a focus on exemplars of moral virtue. Our work is based in part on a computational formal logic previously used to formally model other ethical theories and principles therein, and to implement these models in artificial agents.},
-  pdf={govindarajuluetalaies2019.pdf}
+@inproceedings{sarathyscheutzaai2019,
+  author      = {Vasanth Sarathy and Matthias Scheutz},
+  title       = {On Resolving Ambiguous Anaphoric Expressions
+                 in Imperative Discourse},
+  booktitle   = {Proceedings of the Thirty-Third AAAI Conference on Artificial Intelligence},
+  year        = {2019},
+  abbr        = {AAAI},
+  theme       = {socialreasoning},
+  bibtex_show = true,
+  html        = {https://ojs.aaai.org/index.php/AAAI/article/view/4674},
+  abstract    = {Anaphora resolution is a central problem in natural language understanding. We study a subclass of this problem involving object pronouns when they are used in simple imperative sentences (e.g., “pick it up.”). Specifically, we address cases where situational and contextual information is required to interpret these pronouns. Current state-of-the art statisticallydriven coreference systems and knowledge-based reasoning systems are insufficient to address these cases. In this paper, we introduce, with examples, a general class of situated anaphora resolution problems, propose a proof-of-concept system for disambiguating situated pronouns, and discuss some general types of reasoning that might be needed.},
+  pdf         = {sarathyscheutzaai2019.pdf}
 }
 
-@InProceedings{sarathyaies2019,
-title={Learning Context-Sensitive Norms under
-	   Uncertainty},
-author={Vasanth Sarathy},
-booktitle={Proceedings of the 2nd AAAI/ACM Conference on Artificial Intelligence, Ethics, and Society},
-year={2019},
-abbr={AIES},
-theme={socialreasoning},
-  bibtex_show=true,
-  html={https://dl.acm.org/doi/10.1145/3306618.3314315},
-  abstract={Norms and conventions play a central role in maintaining social order in multi-agent societies [2, 5]. I study the problem of how these norms and conventions can be learned from observation of heterogeneous sources, under conditions of uncertainty. This is necessary as it is not enough to simply hard code a set of norms into a new agent prior to entering society because norms can evolve over time as agents enter and leave the society.}
+@inproceedings{govindarajuluetalaies2019,
+  title       = {Towards the Engineering of Virtuous
+                 Machines},
+  author      = {Naveen Sundar Govindarajulu and Selmer Bringsjord and Rikhiya Ghosh and
+                 Vasanth Sarathy},
+  booktitle   = {Proceedings of the 2nd AAAI/ACM Conference on Artificial Intelligence, Ethics, and Society},
+  year        = {2019},
+  abbr        = {AIES},
+  theme       = {socialreasoning},
+  bibtex_show = true,
+  html        = {https://dl.acm.org/doi/10.1145/3306618.3314256},
+  abstract    = {While various traditions under the 'virtue ethics' umbrella have been studied extensively and advocated by ethicists, it has not been clear that there exists a version of virtue ethics rigorous enough to be a target for machine ethics (which we take to include the engineering of an ethical sensibility in a machine or robot itself, not only the study of ethics in the humans who might create artificial agents). We begin to address this by presenting an embryonic formalization of a key part of any virtue-ethics theory: namely, the learning of virtue by a focus on exemplars of moral virtue. Our work is based in part on a computational formal logic previously used to formally model other ethical theories and principles therein, and to implement these models in artificial agents.},
+  pdf         = {govindarajuluetalaies2019.pdf}
+}
+
+@inproceedings{sarathyaies2019,
+  title       = {Learning Context-Sensitive Norms under
+                 Uncertainty},
+  author      = {Vasanth Sarathy},
+  booktitle   = {Proceedings of the 2nd AAAI/ACM Conference on Artificial Intelligence, Ethics, and Society},
+  year        = {2019},
+  abbr        = {AIES},
+  theme       = {socialreasoning},
+  bibtex_show = true,
+  html        = {https://dl.acm.org/doi/10.1145/3306618.3314315},
+  abstract    = {Norms and conventions play a central role in maintaining social order in multi-agent societies [2, 5]. I study the problem of how these norms and conventions can be learned from observation of heterogeneous sources, under conditions of uncertainty. This is necessary as it is not enough to simply hard code a set of norms into a new agent prior to entering society because norms can evolve over time as agents enter and leave the society.}
 }
 
 % 2018
 
 @article{sarathy2018MacGyverACS,
-  title={MacGyver Problems: AI Challenges for
-		 Testing Resourcefulness and Creativity},
-  author={Vasanth Sarathy and Matthias Scheutz},
-  journal={Advances in Cognitive Systems},
-  volume={6},
-  year={2018},
-  abbr={ACS},
-  bibtex_show=true,
-  theme={problemsolving},
-  abstract={When faced with real-world problems that seem unsolvable, humans display an exceptional degree
-of flexibility and creativity, improvising solutions with the limited resources available. In this essay,
-we propose a class of domain-independent AI challenge tasks – MacGyver Problems – that target
-these capabilities. We present a formal framework for generating these problems and outline a
-set of independent abilities that will let the research community make progress. We also consider,
-informally, ways in which researchers can measure progress and evaluate agents under the proposed
-framework.},
-  pdf={sarathy2018MacGyverACS.pdf}
-  }
+  title       = {MacGyver Problems: AI Challenges for
+                 Testing Resourcefulness and Creativity},
+  author      = {Vasanth Sarathy and Matthias Scheutz},
+  journal     = {Advances in Cognitive Systems},
+  volume      = {6},
+  year        = {2018},
+  abbr        = {ACS},
+  bibtex_show = true,
+  theme       = {problemsolving},
+  abstract    = {When faced with real-world problems that seem unsolvable, humans display an exceptional degree
+                 of flexibility and creativity, improvising solutions with the limited resources available. In this essay,
+                 we propose a class of domain-independent AI challenge tasks – MacGyver Problems – that target
+                 these capabilities. We present a formal framework for generating these problems and outline a
+                 set of independent abilities that will let the research community make progress. We also consider,
+                 informally, ways in which researchers can measure progress and evaluate agents under the proposed
+                 framework.},
+  pdf         = {sarathy2018MacGyverACS.pdf}
+}
 
 @article{sarathy2018real,
-  title={Real World Problem-Solving},
-  author={Vasanth Sarathy},
-  journal={Frontiers in Human Neuroscience},
-  volume={12},
-  year={2018},
-  publisher={Frontiers Media SA},
-  abbr={Frontiers (Neuro)},
-  theme={problemsolving},
-  bibtex_show=true,
-  abstract={Real world problem-solving (RWPS) is what we do every day. It requires flexibility, resilience, resourcefulness, and a certain degree of creativity. A crucial feature of RWPS is that it involves continuous interaction with the environment during the problem-solving process. In this process, the environment can be seen as not only a source of inspiration for new ideas but also as a tool to facilitate creative thinking. The cognitive neuroscience literature in creativity and problem-solving is extensive, but it has largely focused on neural networks that are active when subjects are not focused on the outside world, i.e., not using their environment. In this paper, I attempt to combine the relevant literature on creativity and problem-solving with the scattered and nascent work in perceptually-driven learning from the environment. I present my synthesis as a potential new theory for real world problem-solving and map out its hypothesized neural basis. I outline some testable predictions made by the model and provide some considerations and ideas for experimental paradigms that could be used to evaluate the model more thoroughly.},
-  html={https://www.frontiersin.org/articles/10.3389/fnhum.2018.00261/full},
-  pdf={sarathy2018real.pdf}
+  title       = {Real World Problem-Solving},
+  author      = {Vasanth Sarathy},
+  journal     = {Frontiers in Human Neuroscience},
+  volume      = {12},
+  year        = {2018},
+  publisher   = {Frontiers Media SA},
+  abbr        = {Frontiers (Neuro)},
+  theme       = {problemsolving},
+  bibtex_show = true,
+  abstract    = {Real world problem-solving (RWPS) is what we do every day. It requires flexibility, resilience, resourcefulness, and a certain degree of creativity. A crucial feature of RWPS is that it involves continuous interaction with the environment during the problem-solving process. In this process, the environment can be seen as not only a source of inspiration for new ideas but also as a tool to facilitate creative thinking. The cognitive neuroscience literature in creativity and problem-solving is extensive, but it has largely focused on neural networks that are active when subjects are not focused on the outside world, i.e., not using their environment. In this paper, I attempt to combine the relevant literature on creativity and problem-solving with the scattered and nascent work in perceptually-driven learning from the environment. I present my synthesis as a potential new theory for real world problem-solving and map out its hypothesized neural basis. I outline some testable predictions made by the model and provide some considerations and ideas for experimental paradigms that could be used to evaluate the model more thoroughly.},
+  html        = {https://www.frontiersin.org/articles/10.3389/fnhum.2018.00261/full},
+  pdf         = {sarathy2018real.pdf}
 }
 
-@Article{ sarathyetal16ieeej,
-	author = {Vasanth Sarathy and Matthias Scheutz},
-	title = {A Logic-based Computational Framework
-		  for Inferring Cognitive Affordances},
-	journal = {IEEE Transactions on Cognitive and Developmental Systems},
-year={2018}, 
-volume={10}, 
-number={1}, 
-pages={26-43}, 
-abbr={IEEE-TCDS},
-bibtex_show=true,
-abstract={The concept of “affordance” refers to the relationship between human perceivers and aspects of their environment. Being able to infer affordances is central to commonsense reasoning, tool use and creative problem solving in artificial agents. Existing approaches to inferring affordances have focused on functional aspects, relying on either static ontologies or statistical formalisms to extract relationships between physical features of objects, actions, and the corresponding effects of their interaction. These approaches do not provide flexibility with which to reason about affordances in the open world, where affordances are influenced by changing context, social norms, historical precedence, and uncertainty. We develop a computational framework comprising a probabilistic rules-based logical representation coupled with a computational architecture (cognitive affordances logically expressed) to reason about affordances in a more general manner than described in the existing literature. Our computational architecture allows robotic agents to make deductive and abductive inferences about functional and social affordances, collectively and dynamically, thereby allowing the agent to adapt to changing conditions. We demonstrate our approach with experiments, and show that an agent can successfully reason through situations that involve a tight interplay between various social and functional norms.},
-html={https://ieeexplore.ieee.org/abstract/document/7583652},
-pdf={sarathyetal16ieeej.pdf}
+@article{sarathyetal16ieeej,
+  author      = {Vasanth Sarathy and Matthias Scheutz},
+  title       = {A Logic-based Computational Framework
+                 for Inferring Cognitive Affordances},
+  journal     = {IEEE Transactions on Cognitive and Developmental Systems},
+  year        = {2018},
+  volume      = {10},
+  number      = {1},
+  pages       = {26-43},
+  abbr        = {IEEE-TCDS},
+  bibtex_show = true,
+  abstract    = {The concept of “affordance” refers to the relationship between human perceivers and aspects of their environment. Being able to infer affordances is central to commonsense reasoning, tool use and creative problem solving in artificial agents. Existing approaches to inferring affordances have focused on functional aspects, relying on either static ontologies or statistical formalisms to extract relationships between physical features of objects, actions, and the corresponding effects of their interaction. These approaches do not provide flexibility with which to reason about affordances in the open world, where affordances are influenced by changing context, social norms, historical precedence, and uncertainty. We develop a computational framework comprising a probabilistic rules-based logical representation coupled with a computational architecture (cognitive affordances logically expressed) to reason about affordances in a more general manner than described in the existing literature. Our computational architecture allows robotic agents to make deductive and abductive inferences about functional and social affordances, collectively and dynamically, thereby allowing the agent to adapt to changing conditions. We demonstrate our approach with experiments, and show that an agent can successfully reason through situations that involve a tight interplay between various social and functional norms.},
+  html        = {https://ieeexplore.ieee.org/abstract/document/7583652},
+  pdf         = {sarathyetal16ieeej.pdf}
 }
 
-@InProceedings{kasenbergetal2018icres,
-    author={Daniel Kasenberg and Vasanth Sarathy and Thomas Arnold and Matthias Scheutz and Tom Williams},
-    title={Quasi-Dilemmas for Artificial Moral
-		   Agents},
-    year={2018},
-    booktitle={International Conference on Robot Ethics and Standards},
-	abbr={ICRES},
-	theme={socialreasoning},
-  bibtex_show=true,
-  pdf={kasenbergetal2018icres.pdf},
-  abstract={In this paper we describe moral quasi-dilemmas (MQDs): situations similar to moral dilemmas, but
-in which an agent is unsure whether exploring the plan space or the world may reveal a course of
-action that satisfies all moral requirements. We argue that artificial moral agents (AMAs) should
-be built to handle MQDs (in particular, by exploring the plan space rather than immediately
-accepting the inevitability of the moral dilemma), and that MQDs may be useful for evaluating
-AMA architectures.},
-arxiv={1807.02572}
+@inproceedings{kasenbergetal2018icres,
+  author      = {Daniel Kasenberg and Vasanth Sarathy and Thomas Arnold and Matthias Scheutz and Tom Williams},
+  title       = {Quasi-Dilemmas for Artificial Moral
+                 Agents},
+  year        = {2018},
+  booktitle   = {International Conference on Robot Ethics and Standards},
+  abbr        = {ICRES},
+  theme       = {socialreasoning},
+  bibtex_show = true,
+  pdf         = {kasenbergetal2018icres.pdf},
+  abstract    = {In this paper we describe moral quasi-dilemmas (MQDs): situations similar to moral dilemmas, but
+                 in which an agent is unsure whether exploring the plan space or the world may reveal a course of
+                 action that satisfies all moral requirements. We argue that artificial moral agents (AMAs) should
+                 be built to handle MQDs (in particular, by exploring the plan space rather than immediately
+                 accepting the inevitability of the moral dilemma), and that MQDs may be useful for evaluating
+                 AMA architectures.},
+  arxiv       = {1807.02572}
 }
 
-@InCollection{ gizzi2018Naecon,
-    author={Evana Gizzi and Lisa Le Vie and Matthias Scheutz and
-			Vasanth Sarathy and Jivko Sinapov},
-    title={Knowledge Acquisition in the Cockpit
-		   Using One-Shot Learning},
-    booktitle={Proceedings of the 2018 IEEE National Aerospace and Electronics Conference},
-    year={2018},
-	abbr={NAECON},
-	theme={problemsolving},
-  bibtex_show=true,
-  html={https://ieeexplore.ieee.org/document/8556704},
-  pdf={gizzi2018Naecon.pdf},
-  abstract={Intelligent systems for aviation need to be capable of understanding and representing anomalous events as they happen in real-time. We explore this problem with a proof of concept framework based on contextual one-shot learning, run on a human-in-the-loop flight simulator. We ran a total of 24 trials, with variations in training, fliers, and set values within the framework, and found that our framework was able to detect and reason about anomalies in all trials. In future work, we would like to explore different heuristics for anomaly reasoning, including nonlinear interactions of cockpit data, and feedback from the flight crew through psychophysiology sensors or natural language interactions.}
+@incollection{gizzi2018Naecon,
+  author      = {Evana Gizzi and Lisa Le Vie and Matthias Scheutz and
+                 Vasanth Sarathy and Jivko Sinapov},
+  title       = {Knowledge Acquisition in the Cockpit
+                 Using One-Shot Learning},
+  booktitle   = {Proceedings of the 2018 IEEE National Aerospace and Electronics Conference},
+  year        = {2018},
+  abbr        = {NAECON},
+  theme       = {problemsolving},
+  bibtex_show = true,
+  html        = {https://ieeexplore.ieee.org/document/8556704},
+  pdf         = {gizzi2018Naecon.pdf},
+  abstract    = {Intelligent systems for aviation need to be capable of understanding and representing anomalous events as they happen in real-time. We explore this problem with a proof of concept framework based on contextual one-shot learning, run on a human-in-the-loop flight simulator. We ran a total of 24 trials, with variations in training, fliers, and set values within the framework, and found that our framework was able to detect and reason about anomalies in all trials. In future work, we would like to explore different heuristics for anomaly reasoning, including nonlinear interactions of cockpit data, and feedback from the flight crew through psychophysiology sensors or natural language interactions.}
 }
 
-@InProceedings{sarathy2018affordanceACS,
-  title={Learning Cognitive Affordances for Objects
-		 from Natural Language Instruction},
-  author={Vasanth Sarathy and Bradley Oosterveld and Evan Krause and Matthias Scheutz},
-  booktitle={Proceedings of the Sixth Annual Conference on Advances in Cognitive Systems},
-  year={2018},
-  abbr={ACS},
-  theme={socialreasoning},
-  bibtex_show=true,
-  pdf={sarathy2018affordanceACS.pdf},
-  abstract={Affordance perception refers to the ability of an agent to extract meaning and usefulness of objects
-in its environment. Cognitive affordance is a richer notion that extends traditional aspects of object
-functionality and action possibilities by incorporating the influence of changing context, social
-norms, historical precedence, and uncertainty. This allows for an increased flexibility with which
-to reason about affordances in a situated manner. Existing work in cognitive affordances, while
-providing the theoretical basis for representation and inference, does not describe how they can
-be learned, and integrated and used with a robotic system. In this work, we describe,
-demonstrate and evaluate an integrated cognitive robotic architecture which can learn cognitive
-affordances for objects from natural language and immediately use this knowledge in a dialoguebased learning and instruction task}}
+@inproceedings{sarathy2018affordanceACS,
+  title       = {Learning Cognitive Affordances for Objects
+                 from Natural Language Instruction},
+  author      = {Vasanth Sarathy and Bradley Oosterveld and Evan Krause and Matthias Scheutz},
+  booktitle   = {Proceedings of the Sixth Annual Conference on Advances in Cognitive Systems},
+  year        = {2018},
+  abbr        = {ACS},
+  theme       = {socialreasoning},
+  bibtex_show = true,
+  pdf         = {sarathy2018affordanceACS.pdf},
+  abstract    = {Affordance perception refers to the ability of an agent to extract meaning and usefulness of objects
+                 in its environment. Cognitive affordance is a richer notion that extends traditional aspects of object
+                 functionality and action possibilities by incorporating the influence of changing context, social
+                 norms, historical precedence, and uncertainty. This allows for an increased flexibility with which
+                 to reason about affordances in a situated manner. Existing work in cognitive affordances, while
+                 providing the theoretical basis for representation and inference, does not describe how they can
+                 be learned, and integrated and used with a robotic system. In this work, we describe,
+                 demonstrate and evaluate an integrated cognitive robotic architecture which can learn cognitive
+                 affordances for objects from natural language and immediately use this knowledge in a dialoguebased learning and instruction task}
+}
 
 % 2017
 
-@InProceedings{sarathyetal2017coginfocom,
-    author={Vasanth Sarathy and Matthias Scheutz and Bertram Malle},
-    title={Learning Behavioral Norms in Uncertain
-		   and Changing Contexts},
-    booktitle={Proceedings of the 2017 8th IEEE International Conference on Cognitive Infocommunications (CogInfoCom)},
-    abstract={We demonstrate a novel cognitive capability with which an agent can dynamically learn norms while being exposed to distinct contexts, recognizing the unique identity of each context and the norms that apply in it.},
-    year={2017},
-    bibtex_show=true,
-    theme={socialreasoning},
-    abbr={CogInfoCom},
-    pdf={sarathyetal2017coginfocom.pdf},
-    abstract={Human behavior is often guided by social and moral norms. Robots that enter human societies must therefore behave in norm-conforming ways as well to increase coordination, predictability, and safety in human-robot interactions. However, human norms are context-specific and laced with uncertainty, making the representation, learning, and communication of norms challenging. We provide a formal representation of norms using deontic logic, Dempster-Shafer Theory, and a machine learning algorithm that allows an artificial agent to learn norms under uncertainty from human data. We demonstrate a novel cognitive capability with which an agent can dynamically learn norms while being exposed to distinct contexts, recognizing the unique identity of each context and the norms that apply in it.}
+@inproceedings{sarathyetal2017coginfocom,
+  author      = {Vasanth Sarathy and Matthias Scheutz and Bertram Malle},
+  title       = {Learning Behavioral Norms in Uncertain
+                 and Changing Contexts},
+  booktitle   = {Proceedings of the 2017 8th IEEE International Conference on Cognitive Infocommunications (CogInfoCom)},
+  abstract    = {We demonstrate a novel cognitive capability with which an agent can dynamically learn norms while being exposed to distinct contexts, recognizing the unique identity of each context and the norms that apply in it.},
+  year        = {2017},
+  bibtex_show = true,
+  theme       = {socialreasoning},
+  abbr        = {CogInfoCom},
+  pdf         = {sarathyetal2017coginfocom.pdf},
+  abstract    = {Human behavior is often guided by social and moral norms. Robots that enter human societies must therefore behave in norm-conforming ways as well to increase coordination, predictability, and safety in human-robot interactions. However, human norms are context-specific and laced with uncertainty, making the representation, learning, and communication of norms challenging. We provide a formal representation of norms using deontic logic, Dempster-Shafer Theory, and a machine learning algorithm that allows an artificial agent to learn norms under uncertainty from human data. We demonstrate a novel cognitive capability with which an agent can dynamically learn norms while being exposed to distinct contexts, recognizing the unique identity of each context and the norms that apply in it.}
 }
 
-@InProceedings{sarathyetal2017cogsci,
-	title={Mental Representations and Computational
-		Modeling of Context-Specific Human Norm Systems},
-	author={Vasanth Sarathy and Matthias Scheutz and Joseph Austerweil and Yoed Kenett and Mowafak Allaham and Bertram Malle},
-	booktitle={Proceedings of the 39th Annual Meeting of the Cognitive Science Society},
-	year={2017},
-  theme={socialreasoning},
-  bibtex_show=true,
-  abbr={CogSci},
-  pdf={sarathyetal2017cogsci.pdf},
-  abstract={Human behavior is frequently guided by social and moral norms; in fact, no societies, no social groups could exist without norms. However, there are few cognitive science approaches to this central phenomenon of norms. While there has been some progress in developing formal representations of norm systems (eg, deontological approaches), we do not yet know basic properties of human norms: how they are represented, activated, and learned. Further, what computational models can capture these properties, and what algorithms could learn them? In this paper we describe initial experiments on human norm representations in which the context specificity of norms features prominently. We then provide a formal representation of norms using Dempster-Shafer Theory that allows a machine learning algorithm to learn norms under uncertainty from these human data, while preserving their context specificity.}
+@inproceedings{sarathyetal2017cogsci,
+  title       = {Mental Representations and Computational
+                 Modeling of Context-Specific Human Norm Systems},
+  author      = {Vasanth Sarathy and Matthias Scheutz and Joseph Austerweil and Yoed Kenett and Mowafak Allaham and Bertram Malle},
+  booktitle   = {Proceedings of the 39th Annual Meeting of the Cognitive Science Society},
+  year        = {2017},
+  theme       = {socialreasoning},
+  bibtex_show = true,
+  abbr        = {CogSci},
+  pdf         = {sarathyetal2017cogsci.pdf},
+  abstract    = {Human behavior is frequently guided by social and moral norms; in fact, no societies, no social groups could exist without norms. However, there are few cognitive science approaches to this central phenomenon of norms. While there has been some progress in developing formal representations of norm systems (eg, deontological approaches), we do not yet know basic properties of human norms: how they are represented, activated, and learned. Further, what computational models can capture these properties, and what algorithms could learn them? In this paper we describe initial experiments on human norm representations in which the context specificity of norms features prominently. We then provide a formal representation of norms using Dempster-Shafer Theory that allows a machine learning algorithm to learn norms under uncertainty from these human data, while preserving their context specificity.}
 }
 
 
 % 2016
 
 
-@InProceedings{sarathy2016icdl,
-	author={Vasanth Sarathy and Matthias Scheutz},
-	title={Beyond Grasping - Perceiving Affordances
-		Across Various Stages of Cognitive Development},
-	booktitle={Proceedings of the The Sixth Joint IEEE International Conference Developmental Learning and Epigenetic Robotics (ICDL)},
-	year={2016},
-  bibtex_show=true,
-  abbr={ICDL},
-  html={https://ieeexplore.ieee.org/abstract/document/7846815},
-  abstract={The concept of “affordance” has typically represented the relationship between human perceivers and their environment. Affordance perception, representation, and inference are central to commonsense reasoning, tool-use and creative problem-solving in artificial agents. Existing approaches to representing affordances have focused on its physical aspects, relying on either static ontologies or statistical formalisms to extract relationships between physical features of objects, actions and the corresponding effects of their interaction. These approaches fail to provide flexibility with which to reason about affordances through various developmental stages, where they are more influenced by changing context, social norms, historical precedence, and uncertainty. We develop a formal rules-based logical representational format coupled with an uncertainty-processing framework to reason about cognitive affordances in a more general manner than shown in the existing literature. Our framework, which is retained through cognitive development, allows agents to make deductive and abductive inferences about functional and social affordances. We demonstrate our approach with an example, and show that an agent can successfully reason through situations that involve a tight interplay between various social and functional norms.},
-  theme={socialreasoning},
-  pdf={sarathy2016icdl.pdf}
+@inproceedings{sarathy2016icdl,
+  author      = {Vasanth Sarathy and Matthias Scheutz},
+  title       = {Beyond Grasping - Perceiving Affordances
+                 Across Various Stages of Cognitive Development},
+  booktitle   = {Proceedings of the The Sixth Joint IEEE International Conference Developmental Learning and Epigenetic Robotics (ICDL)},
+  year        = {2016},
+  bibtex_show = true,
+  abbr        = {ICDL},
+  html        = {https://ieeexplore.ieee.org/abstract/document/7846815},
+  abstract    = {The concept of “affordance” has typically represented the relationship between human perceivers and their environment. Affordance perception, representation, and inference are central to commonsense reasoning, tool-use and creative problem-solving in artificial agents. Existing approaches to representing affordances have focused on its physical aspects, relying on either static ontologies or statistical formalisms to extract relationships between physical features of objects, actions and the corresponding effects of their interaction. These approaches fail to provide flexibility with which to reason about affordances through various developmental stages, where they are more influenced by changing context, social norms, historical precedence, and uncertainty. We develop a formal rules-based logical representational format coupled with an uncertainty-processing framework to reason about cognitive affordances in a more general manner than shown in the existing literature. Our framework, which is retained through cognitive development, allows agents to make deductive and abductive inferences about functional and social affordances. We demonstrate our approach with an example, and show that an agent can successfully reason through situations that involve a tight interplay between various social and functional norms.},
+  theme       = {socialreasoning},
+  pdf         = {sarathy2016icdl.pdf}
 }
 
-@InProceedings{sarathy2016kr,
-	author={Vasanth Sarathy and Matthias Scheutz},
-	title={Cognitive Affordance Representations in
-		Uncertain Logic},
-	booktitle={Proceedings of the 15th International Conference on Principles of Knowledge Representation and Reasoning (KR)},
-	year={2016},
-  abbr={KR},
-  theme={socialreasoning},
-  pdf={sarathy2016kr.pdf},
-  bibtex_show=true,
-  abstract={The concept of "affordance" represents the relationship
-between human perceivers and their environment. Affordance perception, representation, and inference are
-central to commonsense reasoning, tool-use and creative problem-solving in artificial agents. Existing approaches fail to provide flexibility with which to reason
-about affordances in the open world, where they are influenced by changing context, social norms, historical
-precedence, and uncertainty. We develop a formal rulesbased logical representational format coupled with an
-uncertainty-processing framework to reason about cognitive affordances in a more general manner than shown
-in the existing literature. Our framework allows agents
-to make deductive and abductive inferences about functional and social affordances, collectively and dynamically, thereby allowing the agent to adapt to changing
-conditions. We demonstrate our approach with an example, and show that an agent can successfully reason
-through situations that involve a tight interplay between
-various social and functional norms.}
+@inproceedings{sarathy2016kr,
+  author      = {Vasanth Sarathy and Matthias Scheutz},
+  title       = {Cognitive Affordance Representations in
+                 Uncertain Logic},
+  booktitle   = {Proceedings of the 15th International Conference on Principles of Knowledge Representation and Reasoning (KR)},
+  year        = {2016},
+  abbr        = {KR},
+  theme       = {socialreasoning},
+  pdf         = {sarathy2016kr.pdf},
+  bibtex_show = true,
+  abstract    = {The concept of "affordance" represents the relationship
+                 between human perceivers and their environment. Affordance perception, representation, and inference are
+                 central to commonsense reasoning, tool-use and creative problem-solving in artificial agents. Existing approaches fail to provide flexibility with which to reason
+                 about affordances in the open world, where they are influenced by changing context, social norms, historical
+                 precedence, and uncertainty. We develop a formal rulesbased logical representational format coupled with an
+                 uncertainty-processing framework to reason about cognitive affordances in a more general manner than shown
+                 in the existing literature. Our framework allows agents
+                 to make deductive and abductive inferences about functional and social affordances, collectively and dynamically, thereby allowing the agent to adapt to changing
+                 conditions. We demonstrate our approach with an example, and show that an agent can successfully reason
+                 through situations that involve a tight interplay between
+                 various social and functional norms.}
 }
 
 

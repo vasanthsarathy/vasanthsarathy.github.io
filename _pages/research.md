@@ -9,11 +9,11 @@ nav_order: 2
 
 I develop computational methods to:
 1. understand human social cognition, and
-2. build socially-competent AI that is more effective and trustworthy. 
+2. build socially-competent AI that is trustworthy. 
 
 **Applications:** fact-checking and detecting misinformation, moderating online social media content, supporting argumentative writing and debates, and improving chatbots and social robots.
 
-**My Approach:** I take an interdisciplinary approach by combining social/cognitive science theory, linguistics and AI/ML to develop state-of-the-art neuro-symbolic methods. A full list of my publications can be found [here](publications) and on [Google Scholar](https://scholar.google.com/citations?user=3SeoejIAAAAJ&hl=en)
+**My Approach:** I take an interdisciplinary approach by combining social/cognitive science theory, linguistics and AI/ML to develop state-of-the-art neuro-symbolic methods. A full list of my publications can be found [here](/publications) and on [Google Scholar](https://scholar.google.com/citations?user=3SeoejIAAAAJ&hl=en)
 
 Broadly, my research falls into three main themes:
 1. [Social NLP](#social-nlp)
