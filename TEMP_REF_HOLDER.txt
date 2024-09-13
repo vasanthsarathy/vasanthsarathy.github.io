@@ -1,0 +1,40 @@
+@inproceedings{abrams2025aaai,
+  author    = {Mitchell Abrams and Felix Gervits and Vasanth Sarathy and Kaveh Eskandari Miandoab and Matthias Scheutz},
+  title     = {Norm-Based Reference Resolution for Human-Agent Interaction},
+  booktitle = {Proceedings of the Thirty-Ninth AAAI Conference on Artificial Intelligence},
+  year      = {2025},
+  abbr      = {AAAI},
+  theme     = {socialreasoning}
+}
+
+@inproceedings{umair2024emnlp,
+  title     = {Large Language Models Know What To Say But Not When To Speak},
+  author    = {Muhammad Umair and Vasanth Sarathy and Jan Ruiter},
+  booktitle = {Findings of the Association for Computational Linguistics: EMNLP},
+  year      = {2024},
+  publisher = {Association for Computational Linguistics},
+  abbr      = {EMNLP},
+  theme     = {socialreasoning}
+}
+
+@inproceedings{kaveh2024emnlp,
+  title     = {“Let’s Argue Both Sides”: Argument Generation Can Force Small Models to Utilize Previously Inaccessible Reasoning Capabilities},
+  author    = {Kaveh Eskandari Miandoab and Vasanth Sarathy},
+  booktitle = {EMNLP Workshop on Customizable NLP},
+  year      = {2024},
+  publisher = {Association for Computational Linguistics},
+  abbr      = {EMNLP},
+  theme     = {socialreasoning}
+}
+
+@article{sarathy2024,
+  title     = {On Evaluating LLM Integration into Robotic Architectures},
+  author    = {Vasanth Sarathy and Marlow Fawn and Matthew McWilliams and Matthias Scheutz and Bradley Oosterveld},
+  journal   = {ACM Transactions on Intelligent Systems and Technology},
+  volume    = {XX},
+  year      = {2024},
+  publisher = {ACM New York, NY},
+  abbr      = {ACM},
+  theme     = {socialreasoning},
+  abstract  = {LLMs are being increasingly integrated into embodied robotic systems. A useful capability that the LLMs bring to robots is translating noisy spoken human natural language instructions into executable robot actions. However, these integrations are somewhat ad-hoc and understudied as they tend to not consider the gamut of syntactic, semantic, as well as, pragmatic aspects of embodied human communication. What is missing is a characterization of the different paradigms for integrating LLMs into robotic architectures as well as a set of evaluation metrics that capture whether an LLM-equipped robot can correctly understand these different aspects of human instruction. In this paper, we present a suite of evaluation metrics together with data augmentation techniques for evaluating these architectures, using concepts from the cognitive science and human communication literature. To illustrate an application of these metrics and augmentation techniques, we conduct experiments to to compare two integration methods: LLMs as pre-processing components that map human instructions into more constrained versions to be processed by the architecture's natural language understanding (NLU) subsystem, or LLMs as a wholesale replacement for the NLU's parser.   We provide experimental evaluations and a robotic implementation to show the inherent tradeoffs between the methods. Our results suggest that while they offer increased explainability, traditional parsing tools coupled with LLMs do not perform as well as an LLM that replaces a parser entirely. The proposed evaluation metrics together with the characterization of different LLM integration approaches offer the promise of systematically evaluating LLMs as natural language interfaces to robotic systems as well as tackle the important tradeoff between explainability/verifiability/interpretability and robustness to noisy input and broad language understanding in an open-world embodied setting. }
+}
