@@ -1,0 +1,17 @@
+{
+  "name": "Vasanth Sarathy",
+  "title": "Principal Research Scientist",
+  "institution": "Leidos Innovations Center",
+  "url": "https://vsarathy.com",
+  "description": "",
+  "email": "",
+  "github": "vasanthsarathy",
+  "linkedin": "vasanthsarathy",
+  "scholar": "3SeoejIAAAAJ",
+  "navigation": [
+    { "name": "Home", "url": "/" },
+    { "name": "Art", "url": "/art/" },
+    { "name": "Apps", "url": "/apps/" },
+    { "name": "Blog", "url": "/blog/" }
+  ]
+}

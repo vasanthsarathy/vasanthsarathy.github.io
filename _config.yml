@@ -6,9 +6,9 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Vasanth
 middle_name:
 last_name: Sarathy
-email: vasanth.sarathy@tufts.edu
+email:
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Building socially-competent AI.
+  Building secure, interpretable and steerable AI.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
@@ -104,7 +104,7 @@ zotero_username: # your zotero username
 wechat_qr: # filename of your wechat qr-code saved as an image (e.g., wechat-qr.png if saved to assets/img/wechat-qr.png)
 
 contact_note: >
-  vasanth (dot) sarathy (at) tufts (dot) edu
+  
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification

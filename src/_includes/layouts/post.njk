@@ -1,0 +1,20 @@
+---
+layout: layouts/base.njk
+---
+
+<article class="blog-post">
+  <h1 class="blog-post-title">{{ title }}</h1>
+
+  <div class="blog-post-meta">
+    <time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
+    {% if tags %}
+    <span> | Tags:
+    {% for tag in tags %}
+      {{ tag }}{% if not loop.last %}, {% endif %}
+    {% endfor %}
+    </span>
+    {% endif %}
+  </div>
+
+  {{ content | safe }}
+</article>

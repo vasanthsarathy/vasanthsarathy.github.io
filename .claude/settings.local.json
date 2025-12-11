@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:kempoverse.pages.dev)",
+      "Bash(npm install)",
+      "Bash(npm run build:*)"
+    ]
+  }
+}

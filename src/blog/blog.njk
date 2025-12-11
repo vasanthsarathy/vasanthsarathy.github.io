@@ -1,0 +1,37 @@
+---
+layout: layouts/page.njk
+title: Blog
+description: Blog posts on AI, NLP, and technical topics
+permalink: /blog/
+---
+
+<p>Thoughts on AI, research, and technology.</p>
+
+<div class="blog-posts">
+  {% for post in collections.posts %}
+  <div class="blog-post">
+    <h2 class="blog-post-title">
+      <a href="{{ post.url }}">{{ post.data.title }}</a>
+    </h2>
+
+    <div class="blog-post-meta">
+      <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+      {% if post.data.tags %}
+      <span> | Tags: {{ post.data.tags | join(", ") }}</span>
+      {% endif %}
+    </div>
+
+    {% if post.data.description %}
+    <div class="blog-post-excerpt">
+      {{ post.data.description }}
+    </div>
+    {% endif %}
+
+    <a href="{{ post.url }}">Read more →</a>
+  </div>
+  {% endfor %}
+
+  {% if collections.posts.length == 0 %}
+  <p>No posts yet. Check back soon!</p>
+  {% endif %}
+</div>

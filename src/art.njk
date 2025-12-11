@@ -1,0 +1,22 @@
+---
+layout: layouts/page.njk
+title: Legally Drawn
+description: Cartoons about Law that I drew during a creative period between 2010-2015
+permalink: /art/
+---
+
+<p>Single-panel cartoons about law, drawn between 2010-2015.</p>
+
+<div class="gallery">
+  {% for artwork in artworks %}
+  <div class="gallery-item">
+    <a href="{{ artwork.full }}" target="_blank" title="{{ artwork.name }}">
+      <img
+        src="{{ artwork.thumb }}"
+        alt="{{ artwork.name }}"
+        loading="lazy"
+      >
+    </a>
+  </div>
+  {% endfor %}
+</div>
