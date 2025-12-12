@@ -136,6 +136,40 @@ img {
   border: var(--border-width) solid var(--color-border);
 }
 
+/* KaTeX Math Rendering */
+.katex {
+  font-size: 1.1em;
+}
+
+/* Ensure KaTeX vertical positioning works correctly */
+.katex .vlist-t {
+  display: inline-table;
+  table-layout: fixed;
+}
+
+.katex .vlist-r {
+  display: table-row;
+}
+
+.katex .vlist {
+  display: table-cell;
+  vertical-align: bottom;
+  position: relative;
+}
+
+.katex .vlist > span {
+  display: block;
+  height: 0;
+  position: relative;
+}
+
+.katex-display {
+  margin: var(--space-base) 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  text-align: center;
+}
+
 /* Selection - Ember highlight */
 ::selection {
   background-color: var(--color-accent);

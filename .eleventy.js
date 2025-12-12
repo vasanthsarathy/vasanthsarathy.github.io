@@ -1,7 +1,7 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const rssPlugin = require("@11ty/eleventy-plugin-rss");
 const markdownIt = require("markdown-it");
-const markdownItKatex = require("markdown-it-katex");
+const markdownItKatex = require("@traptitech/markdown-it-katex");
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItAttrs = require("markdown-it-attrs");
 
@@ -20,7 +20,10 @@ module.exports = function(eleventyConfig) {
   };
 
   const markdownLib = markdownIt(markdownOptions)
-    .use(markdownItKatex)
+    .use(markdownItKatex, {
+      throwOnError: false,
+      errorColor: '#cc0000'
+    })
     .use(markdownItAnchor, {
       permalink: markdownItAnchor.permalink.headerLink()
     })
