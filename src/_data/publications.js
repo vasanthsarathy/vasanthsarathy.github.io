@@ -71,6 +71,17 @@ module.exports = function () {
     },
     // ---------- 2024 ----------
     {
+      title: "\"Let's Argue Both Sides\": Argument Generation Can Force Small Models to Utilize Previously Inaccessible Reasoning Capabilities",
+      author: "Kaveh Eskandari Miandoab and Vasanth Sarathy",
+      year: "2024",
+      venue: "EMNLP Workshop on Customizable NLP",
+      abbr: "EMNLP-W",
+      tag: "workshop",
+      link: "https://arxiv.org/abs/2410.12997",
+      selected: true,
+      question: "Can arguing both sides unlock hidden reasoning?",
+    },
+    {
       title: "Large Language Models Know What To Say But Not When To Speak",
       author: "Muhammad Umair, Vasanth Sarathy, and Jan P. de Ruiter",
       year: "2024",
