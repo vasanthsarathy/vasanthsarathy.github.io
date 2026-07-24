@@ -337,9 +337,10 @@ details p {
 }
 
 .selected-work li {
-  margin-bottom: var(--space-lg);
-  padding-bottom: var(--space-lg);
+  margin-bottom: 0;
+  padding: var(--space-sm) 0;
   border-bottom: var(--border-width) solid var(--color-border);
+  line-height: 1.35;
 }
 
 .selected-work li:last-child {
@@ -352,7 +353,7 @@ details p {
   font-size: var(--font-size-xs);
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  margin-bottom: var(--space-xs);
+  margin-bottom: var(--space-2xs);
 }
 
 .selected-work a {
@@ -360,10 +361,11 @@ details p {
 }
 
 .selected-work-venue {
-  display: block;
+  display: inline;
   color: var(--color-text-muted);
   font-size: var(--font-size-xs);
-  margin-top: var(--space-xs);
+  margin-left: var(--space-xs);
+  font-family: var(--font-mono);
 }
 
 .selected-work-more {
