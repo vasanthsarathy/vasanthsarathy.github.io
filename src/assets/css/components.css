@@ -358,6 +358,11 @@ details p {
 
 .selected-work a {
   font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+}
+
+.selected-work a:hover {
+  color: var(--color-accent);
 }
 
 .selected-work-venue {
