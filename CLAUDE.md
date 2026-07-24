@@ -52,8 +52,10 @@ src/
   Never state an exact total anywhere on the site — say "more than 40" and link Scholar.
 - Fields: `title, author, year, venue, abbr, tag (journal/workshop/etc), note (oral/spotlight/
   award), link, selected (homepage highlight), question (the eval question the work answers —
-  shown on the homepage Selected Work block)`.
-- Homepage shows entries with `selected: true`; keep those to ~5 and framed by `question`.
+  shown on the homepage Recent Work block)`.
+- Homepage shows entries with `selected: true` under "Recent work"; keep those to ~5, framed by
+  `question`, and favor strong venue tags (main track / journal) — avoid demo-track or
+  extended-abstract papers there.
 
 **Blog posts** (`src/blog/posts/YYYY-MM-DD-title.md`):
 
@@ -66,7 +68,10 @@ description: One-line description
 ---
 ```
 
-KaTeX math is available (`$...$`, `$$...$$`).
+KaTeX math is available (`$...$`, `$$...$$`). New posts automatically appear in the homepage
+"Writing" section (latest 3) and in the Atom feed at `/feed.xml` (`src/feed.njk`) — no extra steps.
+To keep a draft out of the build, add `eleventyExcludeFromCollections: true` and `permalink: false`
+to its front matter.
 
 **Voice / positioning:** homepage and research page copy follows the "banner question + method"
 structure (big question about AI reasoning, answered by building adversarial evaluations, lawyer
@@ -82,7 +87,6 @@ background as the differentiator). Don't flatten this into generic researcher-bi
 
 ## Deployment
 
-- Push to the **`eleventy-migration`** branch → `.github/workflows/deploy-eleventy.yml` builds
+- Push to **`master`** (or `main`) → `.github/workflows/deploy-eleventy.yml` builds
   (Node 18, `npm ci`, `npm run build`) and deploys `_site/` to GitHub Pages. Live in ~2-3 min.
 - `CNAME` (vsarathy.com) and `robots.txt` are passthrough-copied into the build.
-- `master` holds the pre-migration Jekyll history; do not deploy from it.

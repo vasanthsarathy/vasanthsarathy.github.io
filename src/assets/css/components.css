@@ -482,3 +482,22 @@ summary,
   font-size: var(--font-size-xs);
   line-height: 1.35;
 }
+
+/* Homepage recent posts */
+.recent-posts {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-lg) 0;
+}
+
+.recent-posts li {
+  padding: var(--space-xs) 0;
+  line-height: 1.35;
+}
+
+.recent-post-date {
+  font-family: var(--font-mono);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  margin-right: var(--space-sm);
+}
