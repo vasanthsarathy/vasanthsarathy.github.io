@@ -2,7 +2,7 @@ name: Deploy Eleventy to GitHub Pages
 
 on:
   push:
-    branches: [eleventy-migration]
+    branches: [master, main, eleventy-migration]
   workflow_dispatch:
 
 permissions:
