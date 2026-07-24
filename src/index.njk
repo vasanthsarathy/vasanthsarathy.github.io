@@ -8,23 +8,59 @@ title: Home
     <h1>{{ site.name }}</h1>
     <p class="subtitle">{{ site.title }} | {{ site.institution }}</p>
 
-    <p>
-    I study how to make AI systems interpretable, controllable, and grounded in human context. My research explores structured representations and reasoning mechanisms (spanning neurosymbolic models, intent-aware interfaces, and agentic workflows)  to bridge the gap between statistical learning and mission-critical decision-making. I’m especially interested in building systems that align with human goals, justify their behavior, and can be trusted to operate in high-stakes environments.
-
+    <p class="banner-question">
+      When an AI says it's &ldquo;thinking,&rdquo; what is it actually doing? Is it reasoning, or performing?
+      Can it be manipulated &mdash; and is it manipulating us?
     </p>
 
-<h3> Backround </h3>
+    <p>
+      I build and evaluate AI reasoning you can <strong>inspect</strong>, <strong>contest</strong>, and
+      <strong>trust</strong>. My work spans adversarial evaluation of reasoning and agentic systems,
+      computational argumentation, uncertainty quantification, and machine theory of mind. At Leidos, I
+      lead a research team building secure agentic AI &mdash; verification systems that decompose model
+      outputs into claims, evidence, assumptions, and uncertainty, so reasoning failures get caught
+      before they reach high-stakes decisions.
+    </p>
 
-<p>Previously, I was a Research Assistant Professor of Computer Science at <a href="https://engineering.tufts.edu/cs/">Tufts University</a>, and a Senior Researcher at <a href="https://www.sift.net/">Smart Information Flow Technologies (SIFT)</a>, where I led AI efforts for U.S. defense and intelligence programs. Before entering research, I practiced intellectual property law at <a href="https://www.ropesgray.com/en">Ropes & Gray</a> for nearly a decade.</p>
+    <p>
+      Before AI, I spent nearly a decade as an intellectual property attorney at
+      <a href="https://www.ropesgray.com/en">Ropes &amp; Gray</a>. Law is adversarial reasoning as a
+      profession &mdash; evidence, argument, cross-examination, bad-faith persuasion &mdash; and I bring
+      that toolkit to stress-testing AI systems that act. More on the questions I'm working on:
+      <a href="/research/">Research</a>.
+    </p>
 
-<p>I hold a dual Ph.D. in Computer Science and Cognitive Science from <a href="https://engineering.tufts.edu/cs/">Tufts University</a>, where I was advised by <a href="https://hrilab.tufts.edu/">Matthias Scheutz</a> and <a href="https://en.wikipedia.org/wiki/Daniel_Dennett">Dan Dennett</a>. I also earned an M.S. from <a href="https://web.mit.edu/">MIT</a>, a B.S. from the <a href="https://www.uark.edu/">University of Arkansas</a>, and a J.D. from <a href="https://www.bu.edu/law/">Boston University School of Law</a>.</p>
+    <h3>Selected work</h3>
 
+    <ul class="selected-work">
+      {% for pub in publications.selected %}
+      <li>
+        <span class="selected-work-question">{{ pub.question }}</span>
+        <a href="{{ pub.link }}" target="_blank" rel="noopener">{{ pub.title }}</a>
+        <span class="selected-work-venue">{{ pub.abbr }} {{ pub.year }}{% if pub.note %} &middot; {{ pub.note }}{% endif %}</span>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <p class="selected-work-more"><a href="/publications/">Selected publications &rarr;</a> &nbsp;&middot;&nbsp; <a href="https://scholar.google.com/citations?user={{ site.scholar }}">Full record on Google Scholar &rarr;</a></p>
+
+    <h3>Background</h3>
+
+    <p>Previously, I was a Research Assistant Professor of Computer Science at <a href="https://engineering.tufts.edu/cs/">Tufts University</a>, where I led $2M+ in DARPA-funded research on LLM over-trust and reasoning, and a Senior Research Scientist at <a href="https://www.sift.net/">Smart Information Flow Technologies (SIFT)</a>, where I authored and won $3M+ in competitive DARPA funding as PI and led AI efforts for U.S. defense and intelligence programs.</p>
+
+    <p>I hold a dual Ph.D. in Computer Science and Cognitive Science from <a href="https://engineering.tufts.edu/cs/">Tufts University</a>, where I was advised by <a href="https://hrilab.tufts.edu/">Matthias Scheutz</a> and <a href="https://en.wikipedia.org/wiki/Daniel_Dennett">Dan Dennett</a>. I also earned an M.S. from <a href="https://web.mit.edu/">MIT</a>, a B.S. from the <a href="https://www.uark.edu/">University of Arkansas</a>, and a J.D. from <a href="https://www.bu.edu/law/">Boston University School of Law</a>.</p>
 
     <p>This <a href="https://www.bu.edu/law/record/articles/2023/drawing-on-law-to-study-ai/"><strong>2023 BU Law article</strong></a> summarizes my journey.</p>
 
-    <p>Outside of work, I spend time with my wife, three kids, and other family and friends. When I have some spare time, I write and draw <a href="/art/">single-panel cartoons</a>, practice <a href="https://kempoinfo.com/">shaolin-kempo-karate style martial arts</a>, play chess and design <a href="/apps/">games and visual experiences</a>.</p>
+    <h3>Beyond research</h3>
 
-    <p> I also run a health and AI podcast called <a href="https://codeandcure.buzzsprout.com/2502446/follow">Code and Cure</a> where I discus decoding health in the age of AI with an emergency medicine-trained physician.</p>
+    <p>Outside of work, I spend time with my wife, three kids, and other family and friends. When I have some spare time, I draw <a href="/art/">pen-and-ink work and single-panel cartoons</a>, practice <a href="https://kempoinfo.com/">shaolin-kempo-karate style martial arts</a>, play chess, and build <a href="/tools/">research software and creative tools</a>.</p>
+
+    <p>I also co-host <a href="https://codeandcure.buzzsprout.com/2502446/follow">Code and Cure</a>, a podcast on decoding health in the age of AI, with an emergency medicine&ndash;trained physician.</p>
+
+    <h3>Contact</h3>
+
+    <p>I'm always glad to talk about evaluation of reasoning and agentic systems, cognitive security, or AI and law. Email me at <a href="mailto:{{ site.email }}">{{ site.email }}</a>, or find me on <a href="https://scholar.google.com/citations?user={{ site.scholar }}">Google Scholar</a>, <a href="https://github.com/{{ site.github }}">GitHub</a>, and <a href="https://linkedin.com/in/{{ site.linkedin }}">LinkedIn</a>.</p>
 
   </div>
 

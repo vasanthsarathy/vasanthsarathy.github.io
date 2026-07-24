@@ -6,8 +6,8 @@
   --color-text: #0a0a0a;         /* Near black text */
   --color-text-muted: #737373;   /* Medium gray */
   --color-border: #e5e5e5;       /* Light gray borders */
-  --color-accent: #0066cc;       /* Blue accents */
-  --color-accent-hover: #0052a3; /* Darker blue */
+  --color-accent: #c04016;       /* Burnt ember (matches CV / brand) */
+  --color-accent-hover: #9a3312; /* Darker ember */
   --color-code-bg: #f5f5f5;      /* Light gray for code */
   --color-code-border: #e5e5e5;  /* Light gray */
 
@@ -23,25 +23,26 @@
 
   /* Typography - Thin & clean */
   --font-mono: "IBM Plex Mono", "SF Mono", "Monaco", "Cascadia Code", monospace;
+  --font-sans: "IBM Plex Sans", -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   --font-weight-normal: 400;  /* Thin */
   --font-weight-medium: 400;  /* Keep thin */
   --font-weight-semibold: 500; /* Only slightly heavier for headings */
 
-  --font-size-xs: 11px;
-  --font-size-sm: 12px;
-  --font-size-base: 13px;
-  --font-size-md: 14px;
-  --font-size-lg: 15px;
-  --font-size-xl: 17px;
-  --font-size-2xl: 19px;
+  --font-size-xs: 12px;
+  --font-size-sm: 13px;
+  --font-size-base: 15px;
+  --font-size-md: 16px;
+  --font-size-lg: 17px;
+  --font-size-xl: 19px;
+  --font-size-2xl: 22px;
 
   --line-height-tight: 1.2;
-  --line-height-base: 1.5;
+  --line-height-base: 1.6;
   --line-height-relaxed: 1.6;
 
   /* Layout - Compact */
   --max-width: 760px;
-  --page-padding: 12px;
+  --page-padding: 16px;
   --border-width: 1px;
   --border-radius: 0;
 

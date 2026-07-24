@@ -3,15 +3,17 @@
   "title": "Principal Research Scientist",
   "institution": "Leidos Innovations Center",
   "url": "https://vsarathy.com",
-  "description": "",
-  "email": "",
+  "description": "Vasanth Sarathy builds and evaluates AI reasoning you can inspect, contest, and trust — adversarial evaluation of reasoning and agentic AI, with a lawyer's eye for manipulation.",
+  "email": "vasanth@alum.mit.edu",
   "github": "vasanthsarathy",
   "linkedin": "vasanthsarathy",
   "scholar": "3SeoejIAAAAJ",
   "navigation": [
     { "name": "Home", "url": "/" },
-    { "name": "Art", "url": "/art/" },
-    { "name": "Apps", "url": "/apps/" },
-    { "name": "Blog", "url": "/blog/" }
+    { "name": "Research", "url": "/research/" },
+    { "name": "Publications", "url": "/publications/" },
+    { "name": "Blog", "url": "/blog/" },
+    { "name": "Tools", "url": "/tools/" },
+    { "name": "Art", "url": "/art/" }
   ]
 }

@@ -1,54 +1,405 @@
-module.exports = function() {
-  // Simplified publications data (BibTeX parser was causing hangs)
-  // TODO: Implement proper BibTeX parsing or convert manually
+// Publications data — sourced from cv_sarathy_2026.tex (authoritative).
+// Fields: title, author, year, venue, abbr (accent tag), tag (type note),
+// note (oral/spotlight/award), link, selected (homepage highlight), question
+// (the eval question this work answers — used on homepage/research page).
 
+module.exports = function () {
   const publications = [
+    // ---------- 2026 ----------
     {
-      title: 'Tools in the Loop: Quantifying Uncertainty of LLM Question Answering Systems That Use Tools',
-      author: 'Panagiotis Lymperopoulos and Vasanth Sarathy',
-      year: '2025',
-      booktitle: 'Proceedings of AAMAS',
-      abbr: 'AAMAS',
-      theme: 'socialreasoning'
+      title: "Where Norms and References Collide: Evaluating LLMs on Normative Reasoning",
+      author: "Mitchell Abrams, Kaveh Eskandari Miandoab, Felix Gervits, Vasanth Sarathy, and Matthias Scheutz",
+      year: "2026",
+      venue: "AAAI",
+      abbr: "AAAI",
+      note: "oral",
+      link: "https://arxiv.org/abs/2602.02975",
+      selected: true,
+      question: "Does the model reason correctly about norms?",
     },
     {
-      title: '"Let\'s Argue Both Sides": Argument Generation Can Force Small Models to Utilize Previously Inaccessible Reasoning Capabilities',
-      author: 'Kaveh Eskandari Miandoab and Vasanth Sarathy',
-      year: '2024',
-      booktitle: 'EMNLP Workshop on Customizable NLP',
-      abbr: 'EMNLP',
-      arxiv: '2410.12997'
+      title: "IntelliProof: An Argumentation Network-based Conversational Helper for Organized Reflection",
+      author: "Kaveh Eskandari Miandoab, Katharine Kowalyshyn, Kabir Pamnani, Anesu Gavhera, Vasanth Sarathy, and Matthias Scheutz",
+      year: "2026",
+      venue: "AAAI",
+      abbr: "AAAI",
+      tag: "demo track",
+      link: "https://arxiv.org/abs/2511.04528",
+      selected: true,
+      question: "Can a model's reasoning be challenged and defended?",
     },
     {
-      title: 'Large Language Models Know What To Say But Not When To Speak',
-      author: 'Muhammad Umair and Vasanth Sarathy and Jan Ruiter',
-      year: '2024',
-      booktitle: 'Findings of EMNLP',
-      abbr: 'EMNLP',
-      arxiv: '2410.16044',
-      poster: 'umair2024emnlp_poster.pdf'
-    }
+      title: "CogSLLaM: Cognitive Security for Large Language Models",
+      author: "Janine Mator, Chelsea Johnson, Vasanth Sarathy, Erin Roper, Antonio Piazza, Ethan Irby, and Kimberly Ferguson-Walter",
+      year: "2026",
+      venue: "AAAI Symposium Series",
+      abbr: "AAAI-SS",
+      tag: "symposium",
+      note: "oral",
+      link: "https://ojs.aaai.org/index.php/AAAI-SS/article/view/42940",
+      selected: true,
+      question: "Does its reasoning survive deliberate manipulation?",
+    },
+    {
+      title: "State-Wise Constrained Policy Shaping: Runtime Behavior Steering for Safe Reinforcement Learning",
+      author: "Thomas Howell, Phi Bui, Robert McPherson, and Vasanth Sarathy",
+      year: "2026",
+      venue: "AAAI Workshop on AI Governance (AIGOV)",
+      abbr: "AAAI-W",
+      tag: "workshop",
+      note: "oral",
+      link: "https://openreview.net/pdf?id=TZ2gWT3dkH",
+    },
+    // ---------- 2025 ----------
+    {
+      title: "Tools in the Loop: Quantifying Uncertainty of LLM Question Answering Systems That Use Tools",
+      author: "Panagiotis Lymperopoulos and Vasanth Sarathy",
+      year: "2025",
+      venue: "AAMAS",
+      abbr: "AAMAS",
+      tag: "extended abstract",
+      link: "https://arxiv.org/abs/2505.16113",
+      selected: true,
+      question: "Does it know when it doesn't know?",
+    },
+    {
+      title: "On Evaluating LLM Integration into Robotic Architectures",
+      author: "Vasanth Sarathy, Marlow Fawn, Matthew McWilliams, Matthias Scheutz, and Bradley Oosterveld",
+      year: "2025",
+      venue: "ACM Transactions on Intelligent Systems and Technology",
+      abbr: "TIST",
+      tag: "journal",
+      link: "https://doi.org/10.1145/3754340",
+    },
+    // ---------- 2024 ----------
+    {
+      title: "Large Language Models Know What To Say But Not When To Speak",
+      author: "Muhammad Umair, Vasanth Sarathy, and Jan P. de Ruiter",
+      year: "2024",
+      venue: "Findings of EMNLP",
+      abbr: "EMNLP",
+      link: "https://aclanthology.org/2024.findings-emnlp.909/",
+      selected: true,
+      question: "Does it reason correctly about people?",
+    },
+    {
+      title: "Towards Human-Robot Co-Creative Collaboration Through Interactive Task Dialogue",
+      author: "Helen Long, Jingwen Feng, Emma Bethel, Vasanth Sarathy, Elaine Short, and Matthias Scheutz",
+      year: "2024",
+      venue: "ICSR",
+      abbr: "ICSR",
+      note: "oral",
+      link: "https://doi.org/10.1007/978-981-96-3519-1_14",
+    },
+    {
+      title: "Using Puzzle Video Games to Study Cognitive Processes in Human Insight and Creative Problem-Solving",
+      author: "Vasanth Sarathy, Nicholas Rabb, Daniel Kasenberg, and Matthias Scheutz",
+      year: "2024",
+      venue: "CogSci",
+      abbr: "CogSci",
+      link: "https://escholarship.org/uc/item/4bc4q23t",
+    },
+    {
+      title: "Recognizing Value Resonance with Resonance-Tuned RoBERTa",
+      author: "Noam Benkler, Scott Friedman, Pavan Kantharaju, Matthew McLure, Drisana Mosaphir, Vasanth Sarathy, and Sonja Schmer-Galunder",
+      year: "2024",
+      venue: "LREC-COLING",
+      abbr: "COLING",
+      link: "https://aclanthology.org/2024.lrec-main.1195/",
+    },
+    {
+      title: "Analogical Reasoning Within a Conceptual Hyperspace",
+      author: "Howard Goldowsky and Vasanth Sarathy",
+      year: "2024",
+      venue: "IJCAI Workshop on Analogical Abstraction",
+      abbr: "IJCAI-W",
+      tag: "workshop",
+      note: "oral",
+      link: "https://arxiv.org/abs/2411.08684",
+    },
+    {
+      title: "LgTS: Dynamic Task Sampling Using LLM-Generated Sub-Goals for Reinforcement Learning Agents",
+      author: "Yash Shukla, Wenchang Gao, Vasanth Sarathy, Alvaro Velasquez, Robert Wright, and Jivko Sinapov",
+      year: "2024",
+      venue: "AAMAS",
+      abbr: "AAMAS",
+      note: "oral",
+      link: "https://arxiv.org/abs/2310.09454",
+    },
+    // ---------- 2023 ----------
+    {
+      title: "Fostering Online Civil Sanctuaries with Theory-Informed Automated Content Moderation",
+      author: "Vasanth Sarathy, Sonja Schmer-Galunder, Dan Thomsen, Laurel Bobrow, and Richard Freedman",
+      year: "2023",
+      venue: "IC2S2",
+      abbr: "IC2S2",
+      link: "https://openreview.net/pdf?id=hTxziG1qDQ",
+    },
+    {
+      title: "Mapping a Plurality of Explanations with NLP: A Case Study of Mothers and Health Workers in India",
+      author: "Scott Friedman, Sonja Schmer-Galunder, Vasanth Sarathy, Ruta Wheelock, Matthew McLure, Drisana Mosaphir, Robert P. Goldman, Noam Benkler, Pavan Kantharaju, Micah Goldwater, and Cristine Legare",
+      year: "2023",
+      venue: "CogSci",
+      abbr: "CogSci",
+      note: "oral",
+      link: "https://escholarship.org/uc/item/6727h95d",
+    },
+    // ---------- 2022 ----------
+    {
+      title: "Cultural Value Resonance in Folktales: A Transformer-Based Analysis with the World Value Corpus",
+      author: "Noam Benkler, Scott Friedman, Sonja Schmer-Galunder, Drisana Mosaphir, Vasanth Sarathy, Pavan Kantharaju, Matthew McLure, and Robert P. Goldman",
+      year: "2022",
+      venue: "SBP-BRiMS",
+      abbr: "SBP-BRiMS",
+      note: "oral",
+      link: "https://doi.org/10.1007/978-3-031-17114-7_20",
+    },
+    {
+      title: "A Neuro-Symbolic Cognitive System for Intuitive Argumentation",
+      author: "Vasanth Sarathy, Mark Burstein, Scott Friedman, Robert Bobrow, and Ugur Kuter",
+      year: "2022",
+      venue: "Advances in Cognitive Systems (ACS)",
+      abbr: "ACS",
+      note: "oral",
+      link: "https://advancesincognitivesystems.github.io/acs2022/data/acs22_paper-7038.pdf",
+    },
+    {
+      title: "Portals and Spaces: An Egocentric Knowledge Representation for Reasoning about Actions",
+      author: "Christopher Geib, Jeffrey Rye, and Vasanth Sarathy",
+      year: "2022",
+      venue: "Advances in Cognitive Systems (ACS)",
+      abbr: "ACS",
+      link: "https://advancesincognitivesystems.github.io/acs2022/data/acs22_paper-757.pdf",
+    },
+    {
+      title: "BIPLEX: Creative Problem-Solving by Planning for Experimentation",
+      author: "Vasanth Sarathy and Matthias Scheutz",
+      year: "2022",
+      venue: "ICCC",
+      abbr: "ICCC",
+      note: "oral",
+      link: "https://computationalcreativity.net/iccc22/papers/ICCC-2022_paper_53.pdf",
+    },
+    {
+      title: "RAPid-Learn: A Framework for Learning to Recover for Handling Novelties in Open-World Environments",
+      author: "Shivam Goel, Yash Shukla, Vasanth Sarathy, Matthias Scheutz, and Jivko Sinapov",
+      year: "2022",
+      venue: "IEEE ICDL",
+      abbr: "ICDL",
+      note: "oral",
+      link: "https://arxiv.org/abs/2206.12493",
+    },
+    // ---------- 2021 ----------
+    {
+      title: "From Unstructured Text to Causal Knowledge Graphs: A Transformer-Based Approach",
+      author: "Scott Friedman, Ian Magnusson, Vasanth Sarathy, and Sonja Schmer-Galunder",
+      year: "2021",
+      venue: "Advances in Cognitive Systems (ACS)",
+      abbr: "ACS",
+      note: "oral",
+      link: "https://arxiv.org/abs/2202.11768",
+    },
+    {
+      title: "SPOTTER: Extending Symbolic Planning Operators Through Targeted Reinforcement Learning",
+      author: "Vasanth Sarathy, Daniel Kasenberg, Shivam Goel, Jivko Sinapov, and Matthias Scheutz",
+      year: "2021",
+      venue: "AAMAS",
+      abbr: "AAMAS",
+      note: "oral",
+      link: "https://arxiv.org/abs/2012.13037",
+    },
+    {
+      title: "A Novelty-Centric Agent Architecture for Changing Worlds",
+      author: "Faizan Muhammad, Vasanth Sarathy, Gyan Tatiya, Shivam Goel, Saurav Gyawali, Mateo Guaman, Jivko Sinapov, and Matthias Scheutz",
+      year: "2021",
+      venue: "AAMAS",
+      abbr: "AAMAS",
+      note: "oral",
+      link: "https://dl.acm.org/doi/10.5555/3463952.3464062",
+    },
+    // ---------- 2020 ----------
+    {
+      title: "Reasoning Requirements for Indirect Speech Act Interpretation",
+      author: "Vasanth Sarathy, Alexander Tsuetaki, Antonio Roque, and Matthias Scheutz",
+      year: "2020",
+      venue: "COLING",
+      abbr: "COLING",
+      link: "https://aclanthology.org/2020.coling-main.433/",
+    },
+    {
+      title: "Developing a Corpus of Indirect Speech Act Schemas",
+      author: "Antonio Roque, Alexander Tsuetaki, Vasanth Sarathy, and Matthias Scheutz",
+      year: "2020",
+      venue: "LREC",
+      abbr: "LREC",
+      note: "oral",
+      link: "https://aclanthology.org/2020.lrec-1.28/",
+    },
+    // ---------- 2019 ----------
+    {
+      title: "When Exceptions Are the Norm: Exploring the Role of Consent in HRI",
+      author: "Vasanth Sarathy, Thomas Arnold, and Matthias Scheutz",
+      year: "2019",
+      venue: "ACM Transactions on Human-Robot Interaction (THRI)",
+      abbr: "THRI",
+      tag: "journal",
+      link: "https://arxiv.org/abs/1902.01320",
+    },
+    {
+      title: "An Overview of the DIARC Cognitive Architecture",
+      author: "Matthias Scheutz, Thomas Williams, Evan Krause, Bradley Oosterveld, Vasanth Sarathy, and Tyler Frasca",
+      year: "2019",
+      venue: "Cognitive Architectures, Springer",
+      abbr: "Springer",
+      tag: "book chapter",
+      link: "https://doi.org/10.1007/978-3-319-97550-4_11",
+    },
+    {
+      title: "On Resolving Ambiguous Anaphoric Expressions in Imperative Discourse",
+      author: "Vasanth Sarathy and Matthias Scheutz",
+      year: "2019",
+      venue: "AAAI",
+      abbr: "AAAI",
+      note: "oral",
+      link: "https://ojs.aaai.org/index.php/AAAI/article/view/4674",
+    },
+    {
+      title: "Towards the Engineering of Virtuous Machines",
+      author: "Naveen Sundar Govindarajulu, Selmer Bringsjord, Rikhiya Ghosh, and Vasanth Sarathy",
+      year: "2019",
+      venue: "AIES",
+      abbr: "AIES",
+      note: "spotlight",
+      link: "https://www.aies-conference.com/2019/wp-content/papers/main/AIES-19_paper_240.pdf",
+    },
+    {
+      title: "Learning Context-Sensitive Norms under Uncertainty",
+      author: "Vasanth Sarathy",
+      year: "2019",
+      venue: "AIES",
+      abbr: "AIES",
+      link: "https://dl.acm.org/doi/10.1145/3306618.3314315",
+    },
+    // ---------- 2018 ----------
+    {
+      title: "MacGyver Problems: AI Challenges for Testing Resourcefulness and Creativity",
+      author: "Vasanth Sarathy and Matthias Scheutz",
+      year: "2018",
+      venue: "Advances in Cognitive Systems",
+      abbr: "ACS",
+      tag: "journal",
+      link: "https://hrilab.tufts.edu/publications/sarathy2018MacGyverACS.pdf",
+    },
+    {
+      title: "Real World Problem-Solving",
+      author: "Vasanth Sarathy",
+      year: "2018",
+      venue: "Frontiers in Human Neuroscience",
+      abbr: "Frontiers",
+      tag: "journal",
+      link: "https://www.frontiersin.org/articles/10.3389/fnhum.2018.00261/full",
+    },
+    {
+      title: "A Logic-Based Computational Framework for Inferring Cognitive Affordances",
+      author: "Vasanth Sarathy and Matthias Scheutz",
+      year: "2018",
+      venue: "IEEE Transactions on Cognitive and Developmental Systems",
+      abbr: "TCDS",
+      tag: "journal",
+      link: "https://ieeexplore.ieee.org/document/7583652",
+    },
+    {
+      title: "Quasi-Dilemmas for Artificial Moral Agents",
+      author: "Daniel Kasenberg, Vasanth Sarathy, Thomas Arnold, Matthias Scheutz, and Thomas Williams",
+      year: "2018",
+      venue: "ICRES",
+      abbr: "ICRES",
+      note: "oral",
+      link: "https://arxiv.org/abs/1807.02572",
+    },
+    {
+      title: "Knowledge Acquisition in the Cockpit Using One-Shot Learning",
+      author: "Evana Gizzi, Lisa Le Vie, Matthias Scheutz, Vasanth Sarathy, and Jivko Sinapov",
+      year: "2018",
+      venue: "IEEE NAECON",
+      abbr: "NAECON",
+      link: "https://ieeexplore.ieee.org/document/8556704",
+    },
+    {
+      title: "Learning Cognitive Affordances for Objects from Natural Language Instruction",
+      author: "Vasanth Sarathy, Bradley Oosterveld, Evan Krause, and Matthias Scheutz",
+      year: "2018",
+      venue: "Advances in Cognitive Systems (ACS)",
+      abbr: "ACS",
+      note: "oral",
+      link: "https://hrilab.tufts.edu/publications/sarathy2018affordanceACS.pdf",
+    },
+    // ---------- 2017 ----------
+    {
+      title: "Learning Behavioral Norms in Uncertain and Changing Contexts",
+      author: "Vasanth Sarathy, Matthias Scheutz, and Bertram Malle",
+      year: "2017",
+      venue: "IEEE CogInfoCom",
+      abbr: "CogInfoCom",
+      note: "oral",
+      link: "https://ieeexplore.ieee.org/document/8268261",
+    },
+    {
+      title: "Mental Representations and Computational Modeling of Context-Specific Human Norm Systems",
+      author: "Vasanth Sarathy, Matthias Scheutz, Joseph Austerweil, Yoed Kenett, Mowafak Allaham, and Bertram Malle",
+      year: "2017",
+      venue: "CogSci",
+      abbr: "CogSci",
+      note: "Outstanding Student Paper · oral",
+      link: "https://escholarship.org/uc/item/22z3k0f8",
+    },
+    // ---------- 2016 ----------
+    {
+      title: "Beyond Grasping: Perceiving Affordances Across Various Stages of Cognitive Development",
+      author: "Vasanth Sarathy and Matthias Scheutz",
+      year: "2016",
+      venue: "IEEE ICDL-EpiRob",
+      abbr: "ICDL",
+      note: "oral",
+      link: "https://ieeexplore.ieee.org/document/7846815",
+    },
+    {
+      title: "Cognitive Affordance Representations in Uncertain Logic",
+      author: "Vasanth Sarathy and Matthias Scheutz",
+      year: "2016",
+      venue: "KR",
+      abbr: "KR",
+      note: "spotlight",
+      link: "https://hrilab.tufts.edu/publications/sarathy2016kr.pdf",
+    },
   ];
+
+  const patent = {
+    title: "Natural Language Processing for Bias Identification",
+    author: "Vasanth Sarathy, Scott Friedman, and Sara Friedman",
+    year: "2025",
+    venue: "U.S. Patent 12,493,751 B2, issued December 2025",
+    link: "https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/12493751",
+  };
 
   // Group by year
   const groupedByYear = {};
-  publications.forEach(pub => {
-    const year = pub.year || 'Unknown';
-    if (!groupedByYear[year]) {
-      groupedByYear[year] = [];
-    }
+  publications.forEach((pub) => {
+    const year = pub.year || "Unknown";
+    if (!groupedByYear[year]) groupedByYear[year] = [];
     groupedByYear[year].push(pub);
   });
 
-  const years = Object.keys(groupedByYear).sort((a, b) => {
-    const yearA = parseInt(a) || 0;
-    const yearB = parseInt(b) || 0;
-    return yearB - yearA;
-  });
+  const years = Object.keys(groupedByYear).sort(
+    (a, b) => (parseInt(b) || 0) - (parseInt(a) || 0)
+  );
 
   return {
     all: publications,
+    selected: publications.filter((p) => p.selected),
     byYear: groupedByYear,
-    years: years
+    years: years,
+    patent: patent,
+    count: publications.length,
   };
 };
