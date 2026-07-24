@@ -25,8 +25,6 @@ module.exports = function () {
       abbr: "AAAI",
       tag: "demo track",
       link: "https://arxiv.org/abs/2511.04528",
-      selected: true,
-      question: "Can a model's reasoning be challenged and defended?",
     },
     {
       title: "CogSLLaM: Cognitive Security for Large Language Models",
@@ -59,8 +57,6 @@ module.exports = function () {
       abbr: "AAMAS",
       tag: "extended abstract",
       link: "https://arxiv.org/abs/2505.16113",
-      selected: true,
-      question: "Does it know when it doesn't know?",
     },
     {
       title: "On Evaluating LLM Integration into Robotic Architectures",
@@ -70,6 +66,8 @@ module.exports = function () {
       abbr: "TIST",
       tag: "journal",
       link: "https://doi.org/10.1145/3754340",
+      selected: true,
+      question: "How do you evaluate reasoning that acts?",
     },
     // ---------- 2024 ----------
     {
