@@ -6,32 +6,30 @@ permalink: /research/
 ---
 
 <p class="banner-question">
-  Can we trust AI reasoning &mdash; and how do we establish that trust &mdash; as systems move from
-  <em>answering</em> to <em>acting</em>?
+  How can we build and evaluate AI's <b>reasoning</b> capabilities?
 </p>
 
 <p>
   That is the question my research program is organized around. When a model produces a chain of
   &ldquo;thought,&rdquo; is that reasoning faithful to what actually drove the answer, or is it a
-  performance? Can it be bent by an adversary &mdash; and can it bend us? Can its conclusions be
-  challenged and defended, the way we demand of human reasoning in any serious institution? I don't
-  speculate about these questions; I build the experiments that answer them.
+  performance? Can it be bent by an adversary, and can it bend us? Can its conclusions be
+  challenged and defended, the way we demand of human reasoning in any serious institution? 
 </p>
 
 <p>
   I evaluate AI reasoning along four properties, at every level from single model to agent to
-  multi-agent system, using adversarial probes as the primary instrument.
+  multi-agent system, using <b>adversarial probes</b> as the primary instrument.
 </p>
 
 <div class="research-grid">
   <div class="research-property">
     <h3>Legibility &amp; faithfulness <span class="property-verb">— can you inspect it?</span></h3>
     <p>
-      Reasoning should be open-able, not opaque &mdash; and a model's stated reasoning should be
+      Reasoning should be inspectable, not opaque. A model's stated reasoning should be
       faithful to its actual inference process. I approach this with structured and vector-symbolic
       representations (see <a href="https://vsarathy.com/vsax/">VSAX</a>), neuro-symbolic
       argumentation (<a href="https://advancesincognitivesystems.github.io/acs2022/data/acs22_paper-7038.pdf">ACS 2022</a>),
-      and my current work at Leidos on agentic verification &mdash; decomposing LLM outputs into claims,
+      and agentic verification: decomposing LLM outputs into claims,
       evidence, assumptions, and uncertainty.
     </p>
   </div>
@@ -39,11 +37,10 @@ permalink: /research/
   <div class="research-property">
     <h3>Manipulation robustness <span class="property-verb">— does it survive attack?</span></h3>
     <p>
-      Two opposite arrows, one theme: can an adversary bend the model's reasoning, and is the model
+     Can an adversary bend the model's reasoning, and is the model
       bending its user's? This is cognitive security
       (<a href="https://ojs.aaai.org/index.php/AAAI-SS/article/view/42940">CogSLLaM, AAAI-SS 2026</a>),
-      and it's where my legal training does the most work &mdash; law is a decade-long apprenticeship in
-      how arguments mislead.
+      and it's where my legal training does the most work. I explore questions of persuasion, hallucinations, overgeneralizations, jailbreaks and subtle behavioral nudges that influence human-AI interaction.
     </p>
   </div>
 
@@ -54,7 +51,7 @@ permalink: /research/
       I build computational argumentation systems
       (<a href="https://arxiv.org/abs/2511.04528">IntelliProof, AAAI 2026</a>;
       <a href="https://vsarathy.com/arglib/">ArgLib</a>) and benchmarks that test whether models can
-      genuinely engage with arguments rather than merely produce them &mdash; including evidence that
+      genuinely engage with arguments rather than merely produce them. Evidence suggests that AI models are capable arguers and
       generating arguments for both sides unlocks reasoning a model otherwise can't access
       (<a href="https://arxiv.org/abs/2410.12997">EMNLP-W 2024</a>).
     </p>
@@ -63,11 +60,10 @@ permalink: /research/
   <div class="research-property">
     <h3>Social reasoning <span class="property-verb">— does it model other minds?</span></h3>
     <p>
-      Systems that act among people must reason about what others believe, intend, and expect &mdash;
+      Systems that act among people must reason about what others believe, intend, and expect, 
       including norms and conversational timing
       (<a href="https://aclanthology.org/2024.findings-emnlp.909/">EMNLP 2024</a>;
-      <a href="https://arxiv.org/abs/2602.02975">AAAI 2026</a>). Theory-of-mind evaluation is where
-      reasoning meets the social world it operates in.
+      <a href="https://arxiv.org/abs/2602.02975">AAAI 2026</a>). I explore whether AI systems maintain a Theory-of-mind, i.e., whether they can reason about others' beliefs, and whether these models can reason about implicit socio-cultural norms that we humans take for granted and incorporate into our own reasoning.
     </p>
   </div>
 </div>
@@ -75,27 +71,24 @@ permalink: /research/
 <h3>From models to agents to institutions</h3>
 
 <p>
-  Each of these properties gets harder &mdash; and higher-stakes &mdash; as systems move from answering
-  questions to taking actions. My earlier work in cognitive robotics and reinforcement learning studied
+  Each of these properties gets harder as systems move from answering
+  questions to taking actions in the real world. My earlier work in cognitive robotics and reinforcement learning studied
   reliable action under uncertainty and novelty
   (<a href="https://arxiv.org/abs/2012.13037">SPOTTER, AAMAS 2021</a>;
   <a href="https://arxiv.org/abs/2206.12493">RAPid-Learn, ICDL 2022</a>); my current work carries those
   questions to LLM agents &mdash; uncertainty quantification for tool-using systems
   (<a href="https://arxiv.org/abs/2505.16113">AAMAS 2025</a>) and verification of agentic reasoning.
-  The direction I find most compelling is multi-agent: a system of AI agents is an institution, with
-  delegation, trust boundaries, and conflicts of interest &mdash; problems law has been engineering
-  around for centuries.
+  The direction I find most compelling is <b>multi-agent architectures</b>: a system of AI agents is an institution, with
+  delegation, trust boundaries, and conflicts of interest. I explore how these systems can be regulated and governed.
 </p>
 
 <h3>The method: adversarial evaluation</h3>
 
 <p>
-  The instrument behind all of this is the <em>probe</em> &mdash; a targeted manipulation or measurement
-  that forces a system to reveal what it won't volunteer. Interventions beat observations; a hostile
-  test beats a friendly one. Uncertainty quantification and mechanistic interpretability are probe
-  families; benchmarks are probes at scale. Some of this tooling is public on the
-  <a href="/tools/">Tools</a> page, and experiments show up on the
-  <a href="/blog/">blog</a>.
+  The instrument behind all of this is the <em>probe</em>. Broadly, a probe is a targeted manipulation or measurement
+  that forces a system to reveal what it won't volunteer. I believe interventions beat observations; a hostile
+  test beats a friendly one. To me, uncertainty quantification and mechanistic interpretability are probe
+  families, and dataset benchmarks are probes at scale.
 </p>
 
 <p class="selected-work-more"><a href="/publications/">Publications &rarr;</a></p>
