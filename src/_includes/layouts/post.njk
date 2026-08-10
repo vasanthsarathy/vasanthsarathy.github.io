@@ -2,19 +2,23 @@
 layout: layouts/base.njk
 ---
 
-<article class="blog-post">
-  <h1 class="blog-post-title">{{ title }}</h1>
+<div class="hero hero-solo">
+  <div class="hero-text">
+    <p class="eyebrow">
+      <time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
+      {% if tags %}&middot; {{ tags | join(", ") }}{% endif %}
+    </p>
 
-  <div class="blog-post-meta">
-    <time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
-    {% if tags %}
-    <span> | Tags:
-    {% for tag in tags %}
-      {{ tag }}{% if not loop.last %}, {% endif %}
-    {% endfor %}
-    </span>
+    <h1>{{ title }}</h1>
+
+    {% if description %}
+    <p class="banner-question">{{ description }}</p>
     {% endif %}
   </div>
+</div>
 
+<article class="post-body">
   {{ content | safe }}
 </article>
+
+<p class="more-link"><a href="/blog/">&larr; All posts</a></p>

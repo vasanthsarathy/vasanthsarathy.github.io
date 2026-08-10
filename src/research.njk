@@ -1,94 +1,213 @@
 ---
 layout: layouts/page.njk
 title: Research
-description: "Trustworthy reasoning for AI that acts: adversarial evaluation of whether AI reasoning can be inspected, contested, and trusted."
+description: "Reasoning assurance: specifying what good reasoning requires, verifying whether AI systems meet those specifications, monitoring them at runtime, and improving them against the same specifications."
 permalink: /research/
 ---
 
 <p class="banner-question">
-  How can we build and evaluate AI's <b>reasoning</b> capabilities?
+  A system can produce an answer that is accurate, well-sourced, and consistent with every
+  document it was given, without having <b>derived</b> that answer from them. Current evaluation
+  practice checks answers. It rarely checks the reasoning that produced them.
 </p>
 
-<p>
-  That is the question my research program is organized around. When a model produces a chain of
-  &ldquo;thought,&rdquo; is that reasoning faithful to what actually drove the answer, or is it a
-  performance? Can it be bent by an adversary, and can it bend us? Can its conclusions be
-  challenged and defended, the way we demand of human reasoning in any serious institution? 
-</p>
+<section id="reasoning-assurance" data-index="Reasoning assurance">
+  <h2>Reasoning assurance</h2>
 
-<p>
-  I evaluate AI reasoning along four properties, at every level from single model to agent to
-  multi-agent system, using <b>adversarial probes</b> as the primary instrument.
-</p>
+  <p>
+    <b>Reasoning assurance</b> is the science of specifying what good reasoning requires,
+    verifying whether AI systems meet those specifications, monitoring them at runtime, and
+    improving them against the same specifications. Because the systems under test are
+    stochastic, the guarantees available are evidential rather than deductive: claims about
+    reasoning that can be stated precisely, tested, and falsified.
+  </p>
 
-<div class="research-grid">
-  <div class="research-property">
-    <h3>Legibility &amp; faithfulness <span class="property-verb">— can you inspect it?</span></h3>
-    <p>
-      Reasoning should be inspectable, not opaque. A model's stated reasoning should be
-      faithful to its actual inference process. I approach this with structured and vector-symbolic
-      representations (see <a href="https://vsarathy.com/vsax/">VSAX</a>), neuro-symbolic
-      argumentation (<a href="https://advancesincognitivesystems.github.io/acs2022/data/acs22_paper-7038.pdf">ACS 2022</a>),
-      and agentic verification: decomposing LLM outputs into claims,
-      evidence, assumptions, and uncertainty.
-    </p>
+  <p>
+    The failures I am most concerned with lie in the <em>implicit layer</em>: assumptions an
+    argument never states, norms a context never announces, beliefs an interlocutor does not
+    share, reasoning a model reports but does not perform. Consistency checks are insensitive to
+    these, because nothing in the visible output is incorrect. My work aims to make that layer
+    explicit, and then checkable.
+  </p>
+
+  <p>
+    I have worked on these questions for about a decade: more than 40 peer-reviewed publications
+    across AI, NLP, and cognitive science, $5M+ as principal investigator on DARPA and IARPA
+    programs, and released tooling including <a href="https://vsarathy.com/delhi/">delhi</a>, an
+    epistemic model checker. I practiced intellectual property law for nearly ten years
+    beforehand, which shapes how I approach evaluation: cross-examination is a well-developed
+    methodology for testing whether a stated line of reasoning survives adversarial pressure.
+  </p>
+</section>
+
+<section id="properties" data-index="Four properties">
+  <h2>What good reasoning must satisfy</h2>
+
+  <p>
+    I organize the work around four properties, stated as specifications rather than desiderata,
+    and evaluated at every level from a single model to an agent to a multi-agent system.
+  </p>
+
+  <div class="research-grid">
+    <div class="research-property">
+      <h3>Legibility &amp; faithfulness <span class="property-verb">can you inspect it?</span></h3>
+      <p>
+        A model's stated reasoning should be <em>derived</em> from its evidence, not merely
+        consistent with it. These are distinct properties, and the distinction is empirically
+        accessible: conclusions should change when, and only when, the reasons change. I formalize
+        faithfulness as derivation in assumption-based argumentation and test it by perturbation,
+        alongside work on structured and vector-symbolic representations
+        (<a href="https://vsarathy.com/vsax/">VSAX</a>) and neuro-symbolic argumentation
+        (<a href="https://advancesincognitivesystems.github.io/acs2022/data/acs22_paper-7038.pdf">ACS 2022</a>).
+      </p>
+    </div>
+
+    <div class="research-property">
+      <h3>Contestability <span class="property-verb">can you challenge it?</span></h3>
+      <p>
+        A conclusion is trustworthy to the extent that it can be argued with: challenged,
+        defended, revised. I build computational argumentation systems
+        (<a href="https://arxiv.org/abs/2511.04528">IntelliProof, AAAI 2026</a>;
+        <a href="https://vsarathy.com/arglib/">ArgLib</a>) and benchmarks that test whether models
+        engage with arguments rather than merely produce them. Requiring a model to generate
+        arguments for both sides can elicit reasoning it does not otherwise produce
+        (<a href="https://arxiv.org/abs/2410.12997">EMNLP-W 2024</a>).
+      </p>
+    </div>
+
+    <div class="research-property">
+      <h3>Manipulation robustness <span class="property-verb">does it survive attack?</span></h3>
+      <p>
+        Whether an adversary can bend a model's reasoning, and whether the model is bending its
+        user's. This is cognitive security
+        (<a href="https://ojs.aaai.org/index.php/AAAI-SS/article/view/42940">CogSLLaM, AAAI-SS 2026</a>):
+        persuasion, jailbreaks, and the subtler behavioral nudges that shift a user's judgment
+        without their awareness. The evaluation instruments are vulnerable too &mdash; small,
+        task-irrelevant additions to context can reverse what a benchmark concludes.
+      </p>
+    </div>
+
+    <div class="research-property">
+      <h3>Social reasoning <span class="property-verb">does it model other minds?</span></h3>
+      <p>
+        Systems that act among people must reason about what others believe, intend, and expect,
+        including norms and conversational timing
+        (<a href="https://aclanthology.org/2024.findings-emnlp.909/">EMNLP 2024</a>;
+        <a href="https://arxiv.org/abs/2602.02975">AAAI 2026</a>). I state these as epistemic
+        specifications &mdash; knowledge versus belief, belief update under events, higher-order
+        false belief &mdash; and check them with a model checker rather than by reading
+        transcripts by hand (<a href="https://vsarathy.com/delhi/">delhi</a>).
+      </p>
+    </div>
   </div>
+</section>
 
-  <div class="research-property">
-    <h3>Manipulation robustness <span class="property-verb">— does it survive attack?</span></h3>
-    <p>
-     Can an adversary bend the model's reasoning, and is the model
-      bending its user's? This is cognitive security
-      (<a href="https://ojs.aaai.org/index.php/AAAI-SS/article/view/42940">CogSLLaM, AAAI-SS 2026</a>),
-      and it's where my legal training does the most work. I explore questions of persuasion, hallucinations, overgeneralizations, jailbreaks and subtle behavioral nudges that influence human-AI interaction.
-    </p>
-  </div>
+<section id="method" data-index="The method">
+  <h2>The method</h2>
 
-  <div class="research-property">
-    <h3>Contestability <span class="property-verb">— can you challenge it?</span></h3>
-    <p>
-      A trustworthy conclusion is one that can be argued with: challenged, defended, and revised.
-      I build computational argumentation systems
-      (<a href="https://arxiv.org/abs/2511.04528">IntelliProof, AAAI 2026</a>;
-      <a href="https://vsarathy.com/arglib/">ArgLib</a>) and benchmarks that test whether models can
-      genuinely engage with arguments rather than merely produce them. Evidence suggests that AI models are capable arguers and
-      generating arguments for both sides unlocks reasoning a model otherwise can't access
-      (<a href="https://arxiv.org/abs/2410.12997">EMNLP-W 2024</a>).
-    </p>
-  </div>
+  <p>
+    My projects follow a common loop. Its central constraint is that any intervention which
+    improves a system has to be re-checked against the specification that motivated it.
+  </p>
 
-  <div class="research-property">
-    <h3>Social reasoning <span class="property-verb">— does it model other minds?</span></h3>
-    <p>
-      Systems that act among people must reason about what others believe, intend, and expect, 
-      including norms and conversational timing
-      (<a href="https://aclanthology.org/2024.findings-emnlp.909/">EMNLP 2024</a>;
-      <a href="https://arxiv.org/abs/2602.02975">AAAI 2026</a>). I explore whether AI systems maintain a Theory-of-mind, i.e., whether they can reason about others' beliefs, and whether these models can reason about implicit socio-cultural norms that we humans take for granted and incorporate into our own reasoning.
-    </p>
-  </div>
-</div>
+  <ol class="pipeline">
+    <li>
+      <span class="pipeline-num">01</span>
+      <div class="pipeline-body">
+        <h3>Formalize</h3>
+        <p>
+          State what the reasoning capability requires, in logic. I have written specifications
+          of this kind for norms under uncertainty, affordances, pragmatics, epistemic states,
+          and argument structure.
+        </p>
+      </div>
+    </li>
 
-<h3>From models to agents to institutions</h3>
+    <li>
+      <span class="pipeline-num">02</span>
+      <div class="pipeline-body">
+        <h3>Build</h3>
+        <p>
+          Turn the specification into running machinery: model checkers, symbolic reasoners,
+          executable logic programs, and libraries others can use. A specification that cannot
+          be executed cannot be tested against a system.
+        </p>
+      </div>
+    </li>
 
-<p>
-  Each of these properties gets harder as systems move from answering
-  questions to taking actions in the real world. My earlier work in cognitive robotics and reinforcement learning studied
-  reliable action under uncertainty and novelty
-  (<a href="https://arxiv.org/abs/2012.13037">SPOTTER, AAMAS 2021</a>;
-  <a href="https://arxiv.org/abs/2206.12493">RAPid-Learn, ICDL 2022</a>); my current work carries those
-  questions to LLM agents &mdash; uncertainty quantification for tool-using systems
-  (<a href="https://arxiv.org/abs/2505.16113">AAMAS 2025</a>) and verification of agentic reasoning.
-  The direction I find most compelling is <b>multi-agent architectures</b>: a system of AI agents is an institution, with
-  delegation, trust boundaries, and conflicts of interest. I explore how these systems can be regulated and governed.
-</p>
+    <li>
+      <span class="pipeline-num">03</span>
+      <div class="pipeline-body">
+        <h3>Evaluate, adversarially</h3>
+        <p>
+          Test the system against the specification under adversarial conditions rather than
+          favorable ones. <em>Behavioral:</em> does the output satisfy the specification &mdash;
+          invariance, consistency, capacity, faithfulness? <em>Mechanistic:</em> do the internals
+          account for the behavior, under probing, attribution, and intervention?
+        </p>
+      </div>
+    </li>
 
-<h3>The method: adversarial evaluation</h3>
+    <li>
+      <span class="pipeline-num">04</span>
+      <div class="pipeline-body">
+        <h3>Improve, then re-verify</h3>
+        <p>
+          Intervene at runtime (steering, supervision, monitoring), in training (specifications
+          as verifiable rewards), or by construction (neuro-symbolic compilation), and evaluate
+          the result against the specification it started from.
+        </p>
+      </div>
+    </li>
 
-<p>
-  The instrument behind all of this is the <em>probe</em>. Broadly, a probe is a targeted manipulation or measurement
-  that forces a system to reveal what it won't volunteer. I believe interventions beat observations; a hostile
-  test beats a friendly one. To me, uncertainty quantification and mechanistic interpretability are probe
-  families, and dataset benchmarks are probes at scale.
-</p>
+    <li>
+      <span class="pipeline-num">05</span>
+      <div class="pipeline-body">
+        <h3>Distill</h3>
+        <p>
+          Determine what the network has actually learned and separate it from what is
+          incidental. This is what bounds the claims a system can support.
+        </p>
+      </div>
+    </li>
+  </ol>
 
-<p class="selected-work-more"><a href="/publications/">Publications &rarr;</a></p>
+  <p>
+    A single specification serves three roles &mdash; a probe that tests a system, a monitor that
+    observes it at runtime, and a compilation target for building it &mdash; so the formalization
+    done in step 1 is reused at each later stage rather than redone.
+  </p>
+
+  <p>
+    A specification a system fails to satisfy is itself informative. Detecting that a
+    representation has become inadequate, revising it, and constructing a new abstraction is a
+    recognizable pattern in creative and abductive reasoning, and it is also an assurance
+    problem: it asks what a reasoner should do when verification fails. This is why I treat
+    creative reasoning as part of the program rather than adjacent to it, and it connects
+    directly to earlier work on agents that repair their own formal models under novelty
+    (<a href="https://arxiv.org/abs/2012.13037">SPOTTER, AAMAS 2021</a>;
+    <a href="https://arxiv.org/abs/2206.12493">RAPid-Learn, ICDL 2022</a>).
+  </p>
+</section>
+
+<section id="horizon" data-index="Where this goes">
+  <h2>Where this goes</h2>
+
+  <p>
+    Scientific practice is, in effect, institutionalized reasoning assurance. A hypothesis has to
+    survive peer review and replication within a community, which draws on the same three
+    capacities this program formalizes: creative reasoning to generate the hypothesis,
+    argumentative contest to challenge it, and social reasoning to coordinate the community doing
+    the challenging.
+  </p>
+
+  <p>
+    Systems now proposed as automated scientists generate plausible conclusions that are
+    difficult to check &mdash; the failure described above, at the scale of a field. An automated
+    scientist worth relying on would be one whose hypotheses can be contested and whose reasoning
+    can be verified, which raises the question this program is ultimately organized around: who
+    verifies the automated scientist?
+  </p>
+
+  <p class="more-link"><a href="/publications/">Publications &rarr;</a> &nbsp;&middot;&nbsp; <a href="/tools/">Research software &rarr;</a></p>
+</section>

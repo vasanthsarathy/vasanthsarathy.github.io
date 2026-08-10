@@ -3,9 +3,10 @@ layout: layouts/page.njk
 title: Selected Publications
 description: "Publications by Vasanth Sarathy — AI reasoning, evaluation, argumentation, cognitive security, NLP, and robotics"
 permalink: /publications/
+indexNumbering: none
 ---
 
-<p>
+<p class="banner-question">
   More than 40 peer-reviewed publications across AI, NLP, cognitive science, and robotics venues. Below is a selection; the complete record is on
   <a href="https://scholar.google.com/citations?user={{ site.scholar }}">Google Scholar</a>.
 </p>
@@ -13,7 +14,7 @@ permalink: /publications/
 <div class="publications">
   {% for year in publications.years %}
   <div class="year-group">
-    <h2 class="year-heading">{{ year }}</h2>
+    <h2 class="year-heading" id="year-{{ year }}">{{ year }}</h2>
 
     {% for pub in publications.byYear[year] %}
     <div class="publication">
@@ -34,7 +35,7 @@ permalink: /publications/
   {% endfor %}
 
   <div class="year-group">
-    <h2 class="year-heading">Patent</h2>
+    <h2 class="year-heading" id="patent">Patent</h2>
     <div class="publication">
       <div class="publication-title">
         <a href="{{ publications.patent.link }}" target="_blank" rel="noopener">{{ publications.patent.title }}</a>

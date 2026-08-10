@@ -28,7 +28,7 @@ npm run build      # production build to _site/
                            #   markdown-it + KaTeX, posts collection, date filters
 src/
   index.njk                # homepage: banner question, identity, selected work, contact
-  research.njk             # research program: 4 trust properties × model/agent/multi-agent
+  research.njk             # research program: Reasoning Assurance — 4 properties + the method
   publications.njk         # "Selected Publications" page (curated)
   tools.njk                # research software (VSAX, ArgLib, Crucible), Rune, games
   apps.njk                 # redirect stub: /apps/ -> /tools/ (do not delete)
@@ -38,10 +38,24 @@ src/
   _data/site.json          # name, title, email, socials, NAVIGATION
   _data/publications.js    # curated publication list (see below)
   _data/artworks.js        # scans src/assets/img/art/ for the gallery
-  _includes/layouts/       # base.njk (head/meta/OG), page.njk, post.njk
-  _includes/components/    # header.njk (nav), footer.njk
+  _includes/layouts/       # base.njk (shell/head/meta/OG), page.njk, post.njk
+  _includes/components/    # header.njk (wordmark + nav), footer.njk
   assets/css/              # variables.css (design tokens), base.css, components.css
+  assets/js/site.js        # § section index + scroll-spy + reveal observer
 ```
+
+## Page structure
+
+Pages are built from `<section id="…" data-index="…">` blocks, each opening with an `<h2>`.
+`site.js` reads those at runtime and builds the **§ index** pinned in the left margin, so adding
+a section to a template automatically adds an index entry — there is no TOC to maintain. Blog
+posts have no `<section>` wrappers, so the index falls back to their `<h2 id>` headings and drops
+the § numbering (their headings often carry the author's own numbers). Publications sets
+`indexNumbering: none` in front matter so its index lists years instead.
+
+Motion is enhancement only: `site.js` adds the `.reveal` class itself, so with JS off or
+`prefers-reduced-motion` set, every element is simply visible. Never move reveal state into
+CSS-only rules — that reintroduces the flash-of-hidden-content this design avoids.
 
 ## Content rules
 
@@ -68,21 +82,34 @@ description: One-line description
 ---
 ```
 
-KaTeX math is available (`$...$`, `$$...$$`). New posts automatically appear in the homepage
-"Writing" section (latest 3) and in the Atom feed at `/feed.xml` (`src/feed.njk`) — no extra steps.
+KaTeX math is available (`$...$`, `$$...$$`). New posts automatically appear on `/blog/` and in
+the Atom feed at `/feed.xml` (`src/feed.njk`) — no extra steps. The homepage deliberately does
+*not* list recent posts (removed 2026-08-10); keep it that way unless Vasanth asks otherwise.
 To keep a draft out of the build, add `eleventyExcludeFromCollections: true` and `permalink: false`
 to its front matter.
 
-**Voice / positioning:** homepage and research page copy follows the "banner question + method"
-structure (big question about AI reasoning, answered by building adversarial evaluations, lawyer
-background as the differentiator). Don't flatten this into generic researcher-bio language.
+**Voice / positioning:** the research program is named **Reasoning Assurance** — the science of
+specifying what good reasoning requires, verifying whether AI systems meet those specs,
+monitoring them at runtime, and improving them against the same specs. This name is settled;
+don't re-litigate it or drift to "verifiable reasoning" / "trustworthy reasoning". The layer map:
+*trustworthy* = value language · *verifiable* = a goal-state inside the program ·
+*inspect / contest / trust / attribute* = the property vocabulary · *Reasoning Assurance* = the
+discipline. The intellectual signature is the **implicit layer** — assumptions arguments don't
+state, norms contexts don't announce, beliefs interlocutors don't share, reasoning models report
+but don't run — made explicit, then checkable. Homepage and research copy follow the "banner
+question + method" structure, with the lawyer background as the differentiator. Don't flatten
+this into generic researcher-bio language, and don't lead with the assured-discovery horizon —
+that closes the research page, it doesn't open the site.
 
 ## Design system
 
-- Hybrid type: **IBM Plex Sans for body prose, IBM Plex Mono for structure** (headings, nav,
-  labels, venues, metadata). Loaded in `base.njk`; roles assigned in `base.css`/`components.css`.
-- Tokens in `src/assets/css/variables.css`: white background, near-black text, accent =
-  burnt ember `#c04016` (matches CV/brand). No gradients, no rounded corners, 15px base.
+- Three type roles: **Source Serif 4 for display** (headings, leads), **IBM Plex Sans for body
+  prose**, **IBM Plex Mono for structure** (nav, labels, venues, §-numbers, metadata). Loaded in
+  `base.njk`; roles assigned in `base.css`/`components.css`. Leads use serif at weight **300**.
+- Tokens in `src/assets/css/variables.css`: warm paper `#faf9f6`, warm ink `#171210`, secondary
+  text as ink at 58% alpha, hairlines at 10%, accent = burnt ember `#c04016` (matches CV/brand).
+  Ember is reserved for interactive and structural elements — prose bold is weight-500 ink, not
+  ember. 2px corner radius, 17px base.
 - Publications listing is intentionally dense (see `.publications` overrides in components.css).
 
 ## Deployment

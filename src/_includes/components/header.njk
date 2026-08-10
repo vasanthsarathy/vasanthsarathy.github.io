@@ -1,8 +1,12 @@
-<header>
-  <nav>
+<header class="site-header">
+  <a class="wordmark" href="/">{{ site.name }}</a>
+
+  <nav class="site-nav" aria-label="Primary">
     <ul>
       {% for item in site.navigation %}
-      <li><a href="{{ item.url }}">{{ item.name }}</a></li>
+      <li>
+        <a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.name }}</a>
+      </li>
       {% endfor %}
     </ul>
   </nav>

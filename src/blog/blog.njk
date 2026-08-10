@@ -5,7 +5,7 @@ description: Blog posts on AI, NLP, and technical topics
 permalink: /blog/
 ---
 
-<p>
+<p class="banner-question">
   Experiments, math, and paper notes &mdash; working through one question: when an AI says it's
   &ldquo;thinking,&rdquo; what is it actually doing? Follow along via <a href="/feed.xml">RSS</a>.
 </p>
@@ -20,7 +20,7 @@ permalink: /blog/
     <div class="blog-post-meta">
       <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
       {% if post.data.tags %}
-      <span> | Tags: {{ post.data.tags | join(", ") }}</span>
+      <span>&middot; {{ post.data.tags | join(", ") }}</span>
       {% endif %}
     </div>
 
