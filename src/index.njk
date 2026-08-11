@@ -39,11 +39,25 @@ title: Home
     Technically, this means combining methods that are usually pursued separately.
   </p>
 
+  {# Evidence chips are generated from `techniques` tags in _data/publications.js —
+     tag a paper there and it appears here. #}
+  {% macro evidence(key) %}
+    {% if publications.byTechnique[key] %}
+    <p class="toolkit-evidence">
+      {% for pub in publications.byTechnique[key] %}
+      <a href="{{ pub.link }}" target="_blank" rel="noopener" title="{{ pub.title }}">{{ pub.short }}</a>
+      {% endfor %}
+      {{ caller() if caller }}
+    </p>
+    {% endif %}
+  {% endmacro %}
+
   <dl class="toolkit">
     <dt>Logic</dt>
     <dd>
       Modal and epistemic logic, deontic logic, answer set programming, assumption-based
       argumentation &mdash; the languages the specifications are written in.
+      {{ evidence("logic") }}
     </dd>
 
     <dt>Uncertainty</dt>
@@ -51,6 +65,7 @@ title: Home
       Interval and set-valued representations, uncertainty quantification, calibration &mdash;
       ignorance, ambiguity, missing information, and conflict are distinct problems, not one
       number.
+      {{ evidence("uncertainty") }}
     </dd>
 
     <dt>Interpretability</dt>
@@ -58,18 +73,23 @@ title: Home
       Inspectable by construction (vector-symbolic architectures, hyperdimensional computing) or
       recovered after the fact (probes, attribution, interventions) &mdash; superposition is the
       shared mathematics.
+      {% call evidence("interpretability") %}
+      <a href="https://vsarathy.com/vsax/" target="_blank" rel="noopener" title="VSAX — a GPU-accelerated, JAX-native library for Vector Symbolic Architectures">VSAX</a>
+      {% endcall %}
     </dd>
 
     <dt>Planning &amp; RL</dt>
     <dd>
       Symbolic planning, policy shaping, reinforcement learning &mdash; sequential decision
       making and long-horizon goal-directed behavior.
+      {{ evidence("planning") }}
     </dd>
 
     <dt>Language</dt>
     <dd>
       Argumentation and informal logic, dialogue and pragmatics, common ground and theory of mind
       &mdash; reasoning conducted between agents rather than inside one.
+      {{ evidence("language") }}
     </dd>
   </dl>
 

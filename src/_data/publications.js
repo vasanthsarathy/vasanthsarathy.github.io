@@ -1,7 +1,14 @@
 // Publications data — sourced from cv_sarathy_2026.tex (authoritative).
 // Fields: title, author, year, venue, abbr (accent tag), tag (type note),
 // note (oral/spotlight/award), link, selected (homepage highlight), question
-// (the eval question this work answers — used on homepage/research page).
+// (the eval question this work answers — used on homepage/research page),
+// techniques (which homepage toolkit rows cite this paper as evidence).
+//
+// `techniques` is curated, not exhaustive: the toolkit block on the homepage is
+// a short evidence trail, not a second publications page. Keep each key to a
+// handful of papers (4–6), chosen by Vasanth for fit. Keys must match the
+// evidence() calls in src/index.njk:
+// logic · uncertainty · interpretability · planning · language.
 
 module.exports = function () {
   const publications = [
@@ -14,6 +21,7 @@ module.exports = function () {
       abbr: "AAAI",
       note: "oral",
       link: "https://arxiv.org/abs/2602.02975",
+      techniques: ["language"],
       selected: true,
       question: "Does the model reason correctly about norms?",
     },
@@ -47,6 +55,7 @@ module.exports = function () {
       tag: "workshop",
       note: "oral",
       link: "https://openreview.net/pdf?id=TZ2gWT3dkH",
+      techniques: ["planning"],
     },
     // ---------- 2025 ----------
     {
@@ -57,6 +66,7 @@ module.exports = function () {
       abbr: "AAMAS",
       tag: "extended abstract",
       link: "https://arxiv.org/abs/2505.16113",
+      techniques: ["uncertainty"],
     },
     {
       title: "On Evaluating LLM Integration into Robotic Architectures",
@@ -78,6 +88,7 @@ module.exports = function () {
       abbr: "EMNLP-W",
       tag: "workshop",
       link: "https://arxiv.org/abs/2410.12997",
+      techniques: ["language"],
       selected: true,
       question: "Can arguing both sides unlock hidden reasoning?",
     },
@@ -88,6 +99,7 @@ module.exports = function () {
       venue: "Findings of EMNLP",
       abbr: "EMNLP",
       link: "https://aclanthology.org/2024.findings-emnlp.909/",
+      techniques: ["language"],
       selected: true,
       question: "Does it reason correctly about people?",
     },
@@ -125,6 +137,7 @@ module.exports = function () {
       tag: "workshop",
       note: "oral",
       link: "https://arxiv.org/abs/2411.08684",
+      techniques: ["interpretability"],
     },
     {
       title: "LgTS: Dynamic Task Sampling Using LLM-Generated Sub-Goals for Reinforcement Learning Agents",
@@ -134,6 +147,7 @@ module.exports = function () {
       abbr: "AAMAS",
       note: "oral",
       link: "https://arxiv.org/abs/2310.09454",
+      techniques: ["planning"],
     },
     // ---------- 2023 ----------
     {
@@ -152,6 +166,7 @@ module.exports = function () {
       abbr: "CogSci",
       note: "oral",
       link: "https://escholarship.org/uc/item/6727h95d",
+      techniques: ["language"],
     },
     // ---------- 2022 ----------
     {
@@ -171,6 +186,7 @@ module.exports = function () {
       abbr: "ACS",
       note: "oral",
       link: "https://advancesincognitivesystems.github.io/acs2022/data/acs22_paper-7038.pdf",
+      techniques: ["logic"],
     },
     {
       title: "Portals and Spaces: An Egocentric Knowledge Representation for Reasoning about Actions",
@@ -188,6 +204,7 @@ module.exports = function () {
       abbr: "ICCC",
       note: "oral",
       link: "https://computationalcreativity.net/iccc22/papers/ICCC-2022_paper_53.pdf",
+      techniques: ["logic"],
     },
     {
       title: "RAPid-Learn: A Framework for Learning to Recover for Handling Novelties in Open-World Environments",
@@ -197,6 +214,7 @@ module.exports = function () {
       abbr: "ICDL",
       note: "oral",
       link: "https://arxiv.org/abs/2206.12493",
+      techniques: ["planning"],
     },
     // ---------- 2021 ----------
     {
@@ -216,6 +234,7 @@ module.exports = function () {
       abbr: "AAMAS",
       note: "oral",
       link: "https://arxiv.org/abs/2012.13037",
+      techniques: ["planning"],
     },
     {
       title: "A Novelty-Centric Agent Architecture for Changing Worlds",
@@ -234,6 +253,7 @@ module.exports = function () {
       venue: "COLING",
       abbr: "COLING",
       link: "https://aclanthology.org/2020.coling-main.433/",
+      techniques: ["logic"],
     },
     {
       title: "Developing a Corpus of Indirect Speech Act Schemas",
@@ -243,6 +263,7 @@ module.exports = function () {
       abbr: "LREC",
       note: "oral",
       link: "https://aclanthology.org/2020.lrec-1.28/",
+      techniques: ["language"],
     },
     // ---------- 2019 ----------
     {
@@ -271,6 +292,7 @@ module.exports = function () {
       abbr: "AAAI",
       note: "oral",
       link: "https://ojs.aaai.org/index.php/AAAI/article/view/4674",
+      techniques: ["logic"],
     },
     {
       title: "Towards the Engineering of Virtuous Machines",
@@ -280,6 +302,7 @@ module.exports = function () {
       abbr: "AIES",
       note: "spotlight",
       link: "https://www.aies-conference.com/2019/wp-content/papers/main/AIES-19_paper_240.pdf",
+      techniques: ["logic"],
     },
     {
       title: "Learning Context-Sensitive Norms under Uncertainty",
@@ -288,6 +311,7 @@ module.exports = function () {
       venue: "AIES",
       abbr: "AIES",
       link: "https://dl.acm.org/doi/10.1145/3306618.3314315",
+      techniques: ["uncertainty"],
     },
     // ---------- 2018 ----------
     {
@@ -352,6 +376,7 @@ module.exports = function () {
       abbr: "CogInfoCom",
       note: "oral",
       link: "https://ieeexplore.ieee.org/document/8268261",
+      techniques: ["uncertainty"],
     },
     {
       title: "Mental Representations and Computational Modeling of Context-Specific Human Norm Systems",
@@ -380,6 +405,7 @@ module.exports = function () {
       abbr: "KR",
       note: "spotlight",
       link: "https://hrilab.tufts.edu/publications/sarathy2016kr.pdf",
+      techniques: ["uncertainty"],
     },
   ];
 
@@ -403,11 +429,26 @@ module.exports = function () {
     (a, b) => (parseInt(b) || 0) - (parseInt(a) || 0)
   );
 
+  // Group by technique for the homepage toolkit block. Publications are listed
+  // newest-first above, so each group comes out newest-first too. `short` is the
+  // chip label — abbreviated venue + two-digit year, e.g. "AAAI ’26".
+  const groupedByTechnique = {};
+  publications.forEach((pub) => {
+    (pub.techniques || []).forEach((key) => {
+      if (!groupedByTechnique[key]) groupedByTechnique[key] = [];
+      groupedByTechnique[key].push({
+        ...pub,
+        short: pub.abbr + " ’" + String(pub.year).slice(2),
+      });
+    });
+  });
+
   return {
     all: publications,
     selected: publications.filter((p) => p.selected),
     byYear: groupedByYear,
     years: years,
+    byTechnique: groupedByTechnique,
     patent: patent,
     count: publications.length,
   };

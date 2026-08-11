@@ -66,7 +66,14 @@ CSS-only rules — that reintroduces the flash-of-hidden-content this design avo
   Never state an exact total anywhere on the site — say "more than 40" and link Scholar.
 - Fields: `title, author, year, venue, abbr, tag (journal/workshop/etc), note (oral/spotlight/
   award), link, selected (homepage highlight), question (the eval question the work answers —
-  shown on the homepage Recent Work block)`.
+  shown on the homepage Recent Work block), techniques`.
+- `techniques` drives the evidence chips under each row of the homepage toolkit block. Keys:
+  `logic · uncertainty · interpretability · planning · language` — they must match the `evidence()`
+  macro calls in `index.njk`. The data file groups them into `publications.byTechnique` with a
+  `short` chip label (`AAAI ’26`). This tagging is **curated, not exhaustive**: the block is a
+  short citation trail, so keep each key to ~4 papers chosen for fit and venue strength. Tagging a
+  new paper is all it takes to change what the homepage shows. Interpretability is the thin row —
+  it carries one paper plus a hand-written VSAX chip passed through `{% call %}`.
 - Homepage shows entries with `selected: true` under "Recent work"; keep those to ~5, framed by
   `question`, and favor strong venue tags (main track / journal) — avoid demo-track or
   extended-abstract papers there.

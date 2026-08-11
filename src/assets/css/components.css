@@ -488,6 +488,36 @@ main > article { padding-top: var(--space-lg); }
   border-bottom: var(--border-width) solid var(--rule);
 }
 
+/* Evidence chips: the papers behind each strand. Mono venue + year, so the row
+   reads as a citation trail rather than decoration. */
+
+.toolkit-evidence {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs) var(--space-xs);
+  margin: var(--space-sm) 0 0;
+}
+
+.toolkit-evidence a {
+  font-family: var(--font-mono);
+  font-size: var(--size-micro);
+  letter-spacing: 0.03em;
+  color: var(--ink-muted);
+  background-color: var(--ember-wash);
+  background-image: none;
+  border: var(--border-width) solid var(--rule);
+  border-radius: var(--border-radius);
+  padding: 0.25em 0.6em;
+  white-space: nowrap;
+  transition: color var(--dur-hover) var(--ease-out),
+              border-color var(--dur-hover) var(--ease-out);
+}
+
+.toolkit-evidence a:hover {
+  color: var(--ember);
+  border-color: var(--ember-edge);
+}
+
 @media (max-width: 34rem) {
   .toolkit { grid-template-columns: minmax(0, 1fr); }
 
